@@ -1,0 +1,501 @@
+/* CSS Variables */
+
+:root {
+    --primary-color: #002E5D;
+    --secondary-color: #0076B6;
+    --accent-color: #E31837;
+    --light-color: #F8F9FA;
+    --dark-color: #212529;
+    --success-color: #28A745;
+    --text-color: #333;
+    --border-radius: 8px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: silver;
+}
+
+
+/* Header Styles */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 0.2em;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.logo .math-numerator,
+.logo .math-denominator {
+    padding: 0 0.5em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.logo .math-fraction-line {
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    margin: 0.1em 0;
+}
+
+
+/* Logo with brackets */
+
+.logo.with-brackets {
+    position: relative;
+    padding: 0 0.8em;
+}
+
+.logo.with-brackets::before,
+.logo.with-brackets::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.4em;
+    border: 2px solid currentColor;
+}
+
+.logo.with-brackets::before {
+    left: 0;
+    border-right: none;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+.logo.with-brackets::after {
+    right: 0;
+    border-left: none;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+
+
+/* Large logo style */
+
+.logo.large {
+    font-size: 1.5em;
+    margin: 0 0.3em;
+}
+
+.logo.large .math-numerator,
+.logo.large .math-denominator {
+    padding: 0.2em 1em;
+    font-size: 1.5em;
+}
+
+
+/* Small logo style */
+
+.logo.small {
+    font-size: 0.9em;
+    margin: 0 0.1em;
+}
+
+.logo.small .math-numerator,
+.logo.small .math-denominator {
+    padding: 0 0.3em;
+    font-size: 0.9em;
+}
+
+
+/* Color variations for logo */
+
+.logo.primary {
+    color: #002E5D;
+}
+
+.logo.secondary {
+    color: #0076B6;
+}
+
+.logo.white {
+    color: #ffffff;
+}
+
+.logo.dark {
+    color: #333333;
+}
+
+
+/* Animation for logo */
+
+.logo.animated {
+    transition: all 0.3s ease;
+}
+
+.logo.animated:hover {
+    transform: scale(1.1);
+    color: #0076B6;
+}
+
+.header-text h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 0.6px;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    align-self: start;
+}
+
+.student-name {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+/* Hamburger Menu */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: var(--secondary-color);
+    display: none;
+}
+
+nav.active {
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Main Content */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: start;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+}
+
+
+/* About Me Section */
+
+.about-me {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.about-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.about-text h2,
+.student-photo h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Student Photo */
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.student-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 4%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    box-shadow: var(--shadow);
+    justify-self: center;
+    justify-content: center;
+    margin-top: 33px;
+}
+
+.photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: var(--light-color);
+    border: 2px dashed #bdc3c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Courses Section */
+
+.courses {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.courses h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--light-color);
+    border: 2px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    color: var(--secondary-color);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+/* Course Cards */
+
+.courses-container {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    transition: var(--transition);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.course-card.completed {
+    border-left-color: var(--success-color);
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.course-code {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.course-credits {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.course-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.course-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.course-technology {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tech-tag {
+    background-color: var(--light-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--dark-color);
+}
+
+.course-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.status-completed {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-pending {
+    background-color: #FFC107;
+    color: var(--dark-color);
+}
+
+
+/* Credits Summary */
+
+.credits-summary {
+    background-color: var(--light-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#total-credits {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    ;
+}
+
+.social-links a {
+    color: black;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
