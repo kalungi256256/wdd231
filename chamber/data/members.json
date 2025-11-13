@@ -1,0 +1,66 @@
+{
+    "members": [{
+            "name": "Nasuuti General Store",
+            "address": "123 Market Street, Mukono Nasuuti",
+            "phone": "+256-712-345678",
+            "website": "https://nasuutistore.com",
+            "image": "https://plus.unsplash.com/premium_photo-1686878940830-9031355ec98c?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8R2VuZXJhbCUyMFN0b3JlfGVufDB8fDB8fHww",
+            "membershipLevel": 3,
+            "category": "Retail"
+        },
+        {
+            "name": "Mukono Tech Solutions",
+            "address": "456 Tech Avenue, Mukono Nasuuti",
+            "phone": "+256-712-345679",
+            "website": "https://mukonotech.ug",
+            "image": "https://plus.unsplash.com/premium_photo-1661645671364-37449092c617?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8VGVjaCUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D",
+            "membershipLevel": 2,
+            "category": "Technology"
+        },
+        {
+            "name": "Green Valley Farm Produce",
+            "address": "789 Farm Road, Mukono Nasuuti",
+            "phone": "+256-712-345680",
+            "website": "https://greenvalleyfarms.ug",
+            "image": "https://images.unsplash.com/photo-1651346846962-713719196b8d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEZhcm0lMjBQcm9kdWNlfGVufDB8fDB8fHww",
+            "membershipLevel": 3,
+            "category": "Agriculture"
+        },
+        {
+            "name": "Nasuuti Medical Center",
+            "address": "321 Health Street, Mukono Nasuuti",
+            "phone": "+256-712-345681",
+            "website": "https://nasuutimedical.org",
+            "image": "https://plus.unsplash.com/premium_photo-1661398434828-a76964156b42?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJsYWNrJTIwJTIwbnVyc2V8ZW58MHx8MHx8fDA%3D",
+            "membershipLevel": 2,
+            "category": "Healthcare"
+        },
+        {
+            "name": "Pearl of Africa Restaurant",
+            "address": "654 Food Court, Mukono Nasuuti",
+            "phone": "+256-712-345682",
+            "website": "https://pearlrestaurant.ug",
+            "image": "https://plus.unsplash.com/premium_photo-1726783344856-1a2c410413c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBjb29rc3xlbnwwfHwwfHx8MA%3D%3D",
+            "membershipLevel": 1,
+            "category": "Hospitality"
+        },
+        {
+            "name": "Mukono Construction Ltd",
+            "address": "987 Builders Road, Mukono Nasuuti",
+            "phone": "+256-712-345683",
+            "website": "https://mukonoconstruction.com",
+            "image": "https://media.istockphoto.com/id/1297780288/photo/delivering-quality-construction-for-a-quality-lifestyle.webp?a=1&b=1&s=612x612&w=0&k=20&c=7ACEoiotWs7mYKP0EyLJrmPtEiUz5CI5MyCz-daXQZw=",
+            "membershipLevel": 2,
+            "category": "Construction"
+        },
+        {
+            "name": "Nasuuti Primary School",
+            "address": "147 Education Lane, Mukono Nasuuti",
+            "phone": "+256-712-345684",
+            "website": "https://nasuutischool.sc.ug",
+            "image": "https://images.unsplash.com/photo-1547082661-71362fc3969c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJsYWNrJTIwc2Nob29sfGVufDB8fDB8fHww",
+            "membershipLevel": 1,
+            "category": "Education"
+        }
+    ]
+}

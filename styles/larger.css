@@ -1,0 +1,77 @@
+@media only screen and (min-width: 32rem) {
+    /* Header adjustments for larger screens */
+    .header-content {
+        padding: 0 2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    /* Hide mobile menu toggle on larger screens */
+    #menu-toggle {
+        display: none;
+    }
+    #primary-nav {
+        display: flex !important;
+    }
+    /* Grid adjustments */
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+    /* Directory controls */
+    .directory-controls {
+        margin-bottom: 3rem;
+    }
+    .directory-controls h2 {
+        font-size: 2.2rem;
+    }
+    /* Footer adjustments */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 31.999rem) {
+    /* Mobile navigation */
+    #menu-toggle {
+        display: block;
+    }
+    #primary-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        padding: 1rem;
+        gap: 0;
+    }
+    #primary-nav.active {
+        display: flex;
+    }
+    #primary-nav li {
+        width: 100%;
+    }
+    #primary-nav a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+    /* Mobile directory controls */
+    .directory-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .view-toggle {
+        align-self: center;
+    }
+    /* Mobile list view */
+    .list-view .member-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

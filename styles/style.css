@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #084e7c;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#member-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#member-container.list {
+    display: block;
+    padding: 1rem;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}

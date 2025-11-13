@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latter-day Prophets</title>
+    <style>
+         :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        #cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .card p {
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+        
+        .card p strong {
+            color: var(--dark-color);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filter-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--accent-color);
+        }
+        
+        .loading {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin: 2rem 0;
+        }
+        
+        .error {
+            text-align: center;
+            color: var(--accent-color);
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #ffeaea;
+            border-radius: var(--border-radius);
+        }
+        
+        @media (max-width: 768px) {
+            #cards {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #cards {
+                grid-template-columns: 1fr;
+            }
+            .filter-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .filter-btn {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Latter-day Prophets</h1>
+        <p>Learn about the prophets of The Church of Jesus Christ of Latter-day Saints</p>
+    </header>
+
+    <main>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Prophets</button>
+            <button class="filter-btn" data-filter="served-30">Served 30+ Years</button>
+            <button class="filter-btn" data-filter="served-20">Served 20+ Years</button>
+            <button class="filter-btn" data-filter="served-10">Served 10+ Years</button>
+        </div>
+
+        <div id="cards">
+            <div class="loading">Loading prophet data...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Student Name | Latter-day Prophets</p>
+    </footer>
+
+    <script>
+        // Constants
+        const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json';
+        const cards = document.querySelector('#cards');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        // Global variable to store all prophets data
+        let allProphets = [];
+
+        // Fetch prophet data
+        async function getProphetData() {
+            try {
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                allProphets = data.prophets;
+
+                // Display all prophets initially
+                displayProphets(allProphets);
+
+                // Add event listeners to filter buttons
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Update active button
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Filter prophets based on button data-filter attribute
+                        const filter = button.getAttribute('data-filter');
+                        filterProphets(filter);
+                    });
+                });
+
+            } catch (error) {
+                console.error('Error fetching prophet data:', error);
+                cards.innerHTML = `<div class="error">Failed to load prophet data. Please try again later.</div>`;
+            }
+        }
+
+        // Filter prophets based on criteria
+        function filterProphets(filter) {
+            let filteredProphets = [];
+
+            switch (filter) {
+                case 'all':
+                    filteredProphets = allProphets;
+                    break;
+                case 'served-30':
+                    filteredProphets = allProphets.filter(prophet => prophet.length >= 30);
+                    break;
+                case 'served-20':
+                    filteredProphets = allProphets.filter(prophet => prophet.length >= 20);
+                    break;
+                case 'served-10':
+                    filteredProphets = allProphets.filter(prophet => prophet.length >= 10);
+                    break;
+                default:
+                    filteredProphets = allProphets;
+            }
+
+            displayProphets(filteredProphets);
+        }
+
+        // Display prophets in cards
+        const displayProphets = (prophets) => {
+            // Clear current cards
+            cards.innerHTML = '';
+
+            // If no prophets match the filter
+            if (prophets.length === 0) {
+                cards.innerHTML = '<div class="error">No prophets match the selected criteria.</div>';
+                return;
+            }
+
+            // Create a card for each prophet
+            prophets.forEach((prophet) => {
+                // Create elements
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const portrait = document.createElement('img');
+                const cardContent = document.createElement('div');
+                cardContent.className = 'card-content';
+
+                const fullName = document.createElement('h2');
+                const birthDate = document.createElement('p');
+                const birthPlace = document.createElement('p');
+                const deathDate = document.createElement('p');
+                const yearsServed = document.createElement('p');
+                const numChildren = document.createElement('p');
+
+                // Set content
+                fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+
+                birthDate.innerHTML = `<strong>Birth:</strong> ${prophet.birthdate}`;
+                birthPlace.innerHTML = `<strong>Birthplace:</strong> ${prophet.birthplace}`;
+
+                if (prophet.death) {
+                    deathDate.innerHTML = `<strong>Death:</strong> ${prophet.death}`;
+                } else {
+                    deathDate.innerHTML = `<strong>Death:</strong> Still Living`;
+                }
+
+                yearsServed.innerHTML = `<strong>Years as Prophet:</strong> ${prophet.length}`;
+                numChildren.innerHTML = `<strong>Children:</strong> ${prophet.numofchildren}`;
+
+                // Set image attributes
+                portrait.setAttribute('src', prophet.imageurl);
+                portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
+                portrait.setAttribute('loading', 'lazy');
+
+                // Build card structure
+                card.appendChild(portrait);
+                cardContent.appendChild(fullName);
+                cardContent.appendChild(birthDate);
+                cardContent.appendChild(birthPlace);
+                cardContent.appendChild(deathDate);
+                cardContent.appendChild(yearsServed);
+                cardContent.appendChild(numChildren);
+                card.appendChild(cardContent);
+
+                // Add to cards container
+                cards.appendChild(card);
+            });
+        };
+
+        // Initialize the application
+        getProphetData();
+    </script>
+</body>
+
+</html>

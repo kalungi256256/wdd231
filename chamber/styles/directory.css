@@ -1,0 +1,209 @@
+/* View Controls */
+
+.view-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.view-controls h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.view-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.view-buttons button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.view-buttons button.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.view-buttons .icon {
+    font-size: 0.9rem;
+}
+
+
+/* Grid View */
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* Member Cards */
+
+.member-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.member-card p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.member-card .address {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.member-card .phone {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.member-card .website a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.member-card .website a:hover {
+    text-decoration: underline;
+}
+
+.member-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.member-level.np {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.member-level.bronze {
+    background-color: #cd7f32;
+    color: white;
+}
+
+.member-level.silver {
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+.member-level.gold {
+    background-color: #ffd700;
+    color: #333;
+}
+
+
+/* List View Specific Styles */
+
+.list-view .member-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.list-view .member-card img {
+    width: 120px;
+    height: 90px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.list-view .member-card .card-content {
+    flex: 1;
+}
+
+.list-view .member-card .member-details {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+
+/* Responsive Directory */
+
+@media (max-width: 768px) {
+    .view-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-view .member-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .list-view .member-card .member-details {
+        text-align: center;
+    }
+    .grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+    .view-buttons {
+        width: 100%;
+    }
+    .view-buttons button {
+        flex: 1;
+        justify-content: center;
+    }
+}
