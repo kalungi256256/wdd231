@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukono Town Chamber of Commerce</title>
+    <meta name="description" content="Mukono Town Chamber of Commerce - Promoting business interests and community development in Mukono, Uganda">
+    <style>
+         :root {
+            --primary-color: #1a4b8c;
+            --secondary-color: #f9a825;
+            --accent-color: #2e7d32;
+            --light-color: #f1faee;
+            --dark-color: #1d3557;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        h2 {
+            font-size: 1.6rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-text h1 {
+            color: var(--light-text);
+            margin-bottom: 0.2rem;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+        /* Navigation */
+        
+        nav {
+            position: relative;
+        }
+        
+        #menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            position: absolute;
+            top: -70px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        #nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        #nav-menu a {
+            color: var(--light-text);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        #nav-menu a.active {
+            color: var(--secondary-color);
+        }
+        
+        #nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        /* Hero Section */
+        
+        .hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-text);
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .hero-content h2 {
+            font-size: 2.5rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #f57f17;
+            transform: translateY(-3px);
+            color: var(--text-color);
+        }
+        /* Current Events */
+        
+        .current-events {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .event-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        /* Weather Section */
+        
+        .weather {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .weather-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .current-weather,
+        .weather-forecast {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .weather-display {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .temperature {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .weather-day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .weather-day:last-child {
+            border-bottom: none;
+        }
+        
+        .day-name {
+            font-weight: 600;
+            min-width: 60px;
+        }
+        
+        .day-temp {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        /* Spotlight Section */
+        
+        .spotlight {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .spotlight-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .spotlight-card {
+            background: linear-gradient(135deg, var(--light-color) 0%, #ffffff 100%);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spotlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+        }
+        
+        .spotlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .membership-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gold {
+            background: linear-gradient(135deg, #FFD700, #FFC400);
+            color: #333;
+            border: 1px solid #FFC400;
+        }
+        
+        .silver {
+            background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+            color: #333;
+            border: 1px solid #A8A8A8;
+        }
+        
+        .spotlight-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .spotlight-card p {
+            color: var(--text-color);
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+        }
+        
+        .spotlight-card .contact-info {
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 2px solid rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+        }
+        
+        .spotlight-card .contact-info p {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .spotlight-card .contact-info a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin-top: 0.5rem;
+        }
+        
+        .spotlight-card .contact-info a:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+        /* Footer */
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-text);
+            padding: 2rem 0 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info h3,
+        .social-links h3 {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer-meta {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        /* Loading and error states */
+        
+        .loading {
+            text-align: center;
+            font-style: italic;
+            color: var(--primary-color);
+            padding: 2rem;
+        }
+        
+        .error-message {
+            text-align: center;
+            color: var(--secondary-color);
+            background-color: #ffeaea;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            #menu-toggle {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            #nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary-color);
+                width: 200px;
+                padding: 1rem;
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                box-shadow: var(--shadow);
+                z-index: 100;
+            }
+            #nav-menu.show {
+                display: flex;
+            }
+            .hero {
+                height: 300px;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .weather-display {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 250px;
+            }
+            .hero-content {
+                padding: 1rem;
+            }
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+            .events-container,
+            .spotlight-container {
+                grid-template-columns: 1fr;
+            }
+            #menu-toggle {
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>Mukono Chamber of Commerce</h1>
+                    <p>Building Business Community in Mukono</p>
+                </div>
+            </div>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Mukono Town</h2>
+                <p>Connecting businesses, fostering growth, and strengthening our local economy in the heart of Uganda.</p>
+                <a href="join.html" class="cta-button">Join Our Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="current-events">
+            <h2>Current Events in Mukono</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <h3>Mukono Business Networking Forum</h3>
+                    <p class="event-date">November 28, 2023</p>
+                    <p>Join us at Mukono Resort Hotel for our monthly networking event. Connect with local business leaders and entrepreneurs.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Agricultural Innovation Workshop</h3>
+                    <p class="event-date">December 5, 2023</p>
+                    <p>Learn modern farming techniques and agribusiness strategies at our workshop hosted at Mukono District Hall.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Annual Mukono Trade Fair</h3>
+                    <p class="event-date">December 15-17, 2023</p>
+                    <p>Showcase your products and services at the largest trade exhibition in Mukono Town at the Municipal Grounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Mukono Weather</h2>
+            <div class="weather-container">
+                <div class="current-weather">
+                    <h3>Current Conditions</h3>
+                    <div id="current-weather-data">
+                        <div class="weather-display">
+                            <div class="weather-details">
+                                <p class="temperature">24°C</p>
+                                <p class="description">Partly Cloudy</p>
+                                <p>Humidity: 65%</p>
+                                <p>Wind: 3.2 m/s</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast-data">
+                        <div class="weather-day">
+                            <span class="day-name">Mon</span>
+                            <span class="day-description">Partly Cloudy</span>
+                            <span class="day-temp">24°C</span>
+                        </div>
+                        <div class="weather-day">
+                            <span class="day-name">Tue</span>
+                            <span class="day-description">Sunny</span>
+                            <span class="day-temp">26°C</span>
+                        </div>
+                        <div class="weather-day">
+                            <span class="day-name">Wed</span>
+                            <span class="day-description">Light Rain</span>
+                            <span class="day-temp">23°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlight Section -->
+        <section class="spotlight">
+            <h2>Member Spotlight</h2>
+            <div id="spotlight-container" class="spotlight-container">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Plot 42, Main Street</p>
+                <p>Mukono Town, Central Uganda</p>
+                <p>Phone: +256 772 123 456</p>
+                <p>Email: info@mukonochamber.ug</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M32 16c0-8.837-7.163-16-16-16S0 7.163 0 16c0 7.987 5.851 14.604 13.5 15.803V20.625H9.437V16h4.063v-3.527c0-4.009 2.388-6.223 6.041-6.223 1.75 0 3.582.313 3.582.313v3.937h-2.018c-1.988 0-2.609 1.234-2.609 2.5V16h4.437l-.71 4.625h-3.727v11.178C26.149 30.604 32 23.987 32 16z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M32 6.076c-1.177.522-2.443.875-3.771 1.034 1.355-.812 2.396-2.098 2.887-3.63-1.269.75-2.674 1.297-4.169 1.593C25.75 3.796 24.044 3 22.154 3c-3.626 0-6.563 2.938-6.563 6.563 0 .514.058 1.014.17 1.494C10.3 10.784 5.465 8.17 2.227 4.2c-.564.97-.887 2.098-.887 3.3 0 2.278 1.159 4.287 2.92 5.465-1.076-.035-2.088-.33-2.974-.821v.083c0 3.18 2.262 5.834 5.265 6.437-.55.15-1.13.23-1.728.23-.423 0-.834-.041-1.235-.118.834 2.606 3.26 4.504 6.13 4.556-2.246 1.76-5.075 2.81-8.15 2.81-.53 0-1.052-.031-1.566-.091 2.905 1.863 6.355 2.95 10.062 2.95 12.075 0 18.68-10.004 18.68-18.68 0-.285-.006-.57-.019-.85 1.283-.922 2.396-2.075 3.276-3.394z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M29 0H3C1.35 0 0 1.35 0 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM9.6 27H5.2V12h4.4v15zM7.4 10.2c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zM27 27h-4.4v-7.3c0-1.7-.6-2.9-2.2-2.9-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1V27h-4.4V12h4.4v2.1c.6-.9 1.6-2.2 3.9-2.2 2.8 0 4.9 1.8 4.9 5.7V27z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="current-year">2023</span> Mukono Town Chamber of Commerce</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Main JavaScript
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('show');
+            }
+        });
+
+        // Company Spotlight Data
+        const companies = [{
+            name: "Mukono Agro Processors Ltd",
+            address: "Plot 15, Industrial Area, Mukono",
+            phone: "+256 772 456 789",
+            website: "https://mukonoagro.ug",
+            membership: "gold",
+            description: "Leading agricultural processing company specializing in coffee and maize products for export."
+        }, {
+            name: "Nile Tech Solutions",
+            address: "Mukono Town Center, Main Street",
+            phone: "+256 752 987 654",
+            website: "https://niletech.ug",
+            membership: "silver",
+            description: "IT services and digital solutions provider for businesses across Central Uganda."
+        }, {
+            name: "Uganda Crafts Cooperative",
+            address: "Cultural Village, Seeta Road",
+            phone: "+256 702 123 456",
+            website: "https://ugandacrafts.ug",
+            membership: "gold",
+            description: "Promoting local artisans and traditional Ugandan crafts to international markets."
+        }, {
+            name: "Mukono Resort Hotel",
+            address: "Lakeside Drive, Mukono",
+            phone: "+256 392 123 456",
+            website: "https://mukonoresort.ug",
+            membership: "silver",
+            description: "Premium accommodation and conference facilities in the heart of Mukono."
+        }, {
+            name: "Green Valley Farmers Association",
+            address: "Namilyango Road, Mukono District",
+            phone: "+256 752 654 321",
+            website: "https://greenvalleyfarmers.ug",
+            membership: "gold",
+            description: "Cooperative of local farmers promoting sustainable agriculture and fair trade."
+        }];
+
+        function displaySpotlight() {
+            const eligibleCompanies = companies.filter(company =>
+                company.membership === 'gold' || company.membership === 'silver'
+            );
+
+            const numToShow = Math.min(Math.floor(Math.random() * 2) + 2, eligibleCompanies.length);
+            const shuffled = [...eligibleCompanies].sort(() => 0.5 - Math.random());
+            const selectedCompanies = shuffled.slice(0, numToShow);
+
+            let spotlightHTML = '';
+
+            selectedCompanies.forEach(company => {
+                spotlightHTML += `
+                    <div class="spotlight-card">
+                        <span class="membership-badge ${company.membership}">${company.membership.toUpperCase()} MEMBER</span>
+                        <h3>${company.name}</h3>
+                        <p>${company.description}</p>
+                        <div class="contact-info">
+                            <p><strong>Address:</strong> ${company.address}</p>
+                            <p><strong>Phone:</strong> ${company.phone}</p>
+                            <a href="${company.website}" target="_blank" rel="noopener">Visit Website</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('spotlight-container').innerHTML = spotlightHTML;
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            displaySpotlight();
+        });
+    </script>
+</body>
+
+</html>

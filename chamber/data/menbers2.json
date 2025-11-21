@@ -4,6 +4,7 @@
             "address": "Plot 15, Industrial Area, Mukono",
             "phone": "+256 772 456 789",
             "website": "https://mukonoagro.ug",
+            "image": "images/agro-processors.jpg",
             "membership": "gold",
             "description": "Leading agricultural processing company specializing in coffee and maize products for export."
         },
@@ -12,6 +13,7 @@
             "address": "Mukono Town Center, Main Street",
             "phone": "+256 752 987 654",
             "website": "https://niletech.ug",
+            "image": "images/nile-tech.jpg",
             "membership": "silver",
             "description": "IT services and digital solutions provider for businesses across Central Uganda."
         },
@@ -20,6 +22,7 @@
             "address": "Cultural Village, Seeta Road",
             "phone": "+256 702 123 456",
             "website": "https://ugandacrafts.ug",
+            "image": "images/uganda-crafts.jpg",
             "membership": "gold",
             "description": "Promoting local artisans and traditional Ugandan crafts to international markets."
         },
@@ -28,6 +31,7 @@
             "address": "Lakeside Drive, Mukono",
             "phone": "+256 392 123 456",
             "website": "https://mukonoresort.ug",
+            "image": "images/mukono-resort.jpg",
             "membership": "silver",
             "description": "Premium accommodation and conference facilities in the heart of Mukono."
         },
@@ -36,6 +40,7 @@
             "address": "Namilyango Road, Mukono District",
             "phone": "+256 752 654 321",
             "website": "https://greenvalleyfarmers.ug",
+            "image": "images/green-valley.jpg",
             "membership": "gold",
             "description": "Cooperative of local farmers promoting sustainable agriculture and fair trade."
         },
@@ -44,6 +49,7 @@
             "address": "Banking Street, Central Mukono",
             "phone": "+256 312 456 789",
             "website": "https://mukonomfi.ug",
+            "image": "images/mukono-mfi.jpg",
             "membership": "silver",
             "description": "Financial services and business loans supporting local entrepreneurs and small businesses."
         },
@@ -52,6 +58,7 @@
             "address": "Mukono-Jinja Highway, Seeta",
             "phone": "+256 752 111 222",
             "website": "https://seetahardware.ug",
+            "image": "images/seeta-hardware.jpg",
             "membership": "gold",
             "description": "Quality building materials and construction services for residential and commercial projects."
         },
@@ -60,6 +67,7 @@
             "address": "Tourist Center, Mukono Town",
             "phone": "+256 702 333 444",
             "website": "https://pearlafricatours.ug",
+            "image": "images/pearl-tours.jpg",
             "membership": "silver",
             "description": "Local tour operator showcasing Mukono's cultural heritage and natural attractions."
         },
@@ -68,6 +76,7 @@
             "address": "Hospital Road, Mukono",
             "phone": "+256 392 765 432",
             "website": "https://mukonomedical.ug",
+            "image": "images/mukono-medical.jpg",
             "membership": "gold",
             "description": "Comprehensive healthcare services and medical facilities serving the Mukono community."
         },
@@ -76,8 +85,54 @@
             "address": "Lakeside, Ggaba Road",
             "phone": "+256 752 888 999",
             "website": "https://victoriafisheries.ug",
+            "image": "images/victoria-fisheries.jpg",
             "membership": "silver",
             "description": "Fresh fish processing and distribution from Lake Victoria to local and international markets."
+        },
+        {
+            "name": "Mukono Printing Press",
+            "address": "Industrial Area, Mukono",
+            "phone": "+256 702 555 666",
+            "website": "https://mukonoprinting.ug",
+            "image": "images/mukono-printing.jpg",
+            "membership": "gold",
+            "description": "Full-service printing company offering digital and offset printing solutions for businesses."
+        },
+        {
+            "name": "Kawolo Transport Services",
+            "address": "Bus Park, Mukono Town",
+            "phone": "+256 752 777 888",
+            "website": "https://kawolotransport.ug",
+            "image": "images/kawolo-transport.jpg",
+            "membership": "silver",
+            "description": "Reliable transport and logistics services connecting Mukono to major Ugandan cities."
+        },
+        {
+            "name": "Mukono Supermarket Chain",
+            "address": "Main Street, Central Mukono",
+            "phone": "+256 392 444 555",
+            "website": "https://mukonosupermarket.ug",
+            "image": "images/mukono-supermarket.jpg",
+            "membership": "gold",
+            "description": "Leading retail chain offering quality products and groceries at competitive prices."
+        },
+        {
+            "name": "Namanve Industrial Supplies",
+            "address": "Namanve Industrial Park, Mukono",
+            "phone": "+256 702 222 333",
+            "website": "https://namanvesupplies.ug",
+            "image": "images/namanve-supplies.jpg",
+            "membership": "silver",
+            "description": "Supplier of industrial equipment and materials to businesses in the greater Mukono area."
+        },
+        {
+            "name": "Mukono Education Foundation",
+            "address": "Education Hill, Mukono",
+            "phone": "+256 312 999 000",
+            "website": "https://mukonoeducation.ug",
+            "image": "images/mukono-education.jpg",
+            "membership": "gold",
+            "description": "Non-profit organization supporting educational initiatives and scholarship programs in Mukono."
         }
     ]
 }

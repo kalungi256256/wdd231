@@ -40,9 +40,9 @@ function initNavigation() {
 // Weather API functionality
 async function loadWeatherData() {
     // Replace with your actual API key and location
-    const apiKey = 'your-api-key-here';
+    const apiKey = '4b6617030376791602a616bc73c4e742';
     const city = 'Mukono';
-    const state = 'ID';
+    const state = '0.3546979384319345, 32.75232000624683';
     const country = 'Uganda';
 
     try {
