@@ -1,7 +1,7 @@
 // scripts/spotlight.js - Display ALL Gold/Silver Members
 document.addEventListener('DOMContentLoaded', function() {
     const spotlightContainer = document.getElementById('spotlight-members');
-    console.log('🎯 Spotlight script started - Displaying ALL eligible members...');
+    console.log(' Spotlight script started - Displaying ALL eligible members...');
 
     try {
         // Direct JavaScript array with company data
