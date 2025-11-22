@@ -46,21 +46,21 @@ function displayGridMembers(members) {
         const memberCard = document.createElement('div');
         memberCard.className = 'member-card';
 
-        const membershipText = getMembershipLevel(member.membershipLevel);
+        const membershipText = getMembershipLevel(member.membership);
 
         // Resolve image source: accept absolute URLs, paths starting with '/', or plain filenames
         let imgSrc = member.image || 'images/placeholder.svg';
-        if (!/^https?:\/\//i.test(imgSrc) && !imgSrc.startsWith('/') && !imgSrc.startsWith('images/')) {
+        if (imgSrc && !/^https?:\/\//i.test(imgSrc) && !imgSrc.startsWith('/') && !imgSrc.startsWith('images/')) {
             imgSrc = `images/${imgSrc}`;
         }
 
         memberCard.innerHTML = `
-            <img src="${imgSrc}" alt="${member.name}" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+            <img src="${imgSrc}" alt="${member.name}" loading="lazy" onerror="this.src='images/placeholder.svg';">
             <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
-            <p>Category: ${member.category}</p>
+            <p>${member.address || ''}</p>
+            <p>${member.phone || ''}</p>
+            <p><a href="${member.website || '#'}" target="_blank" rel="noopener">Visit Website</a></p>
+            <p>Category: ${member.category || 'N/A'}</p>
             <span class="membership-level ${membershipText.toLowerCase()}">${membershipText} Member</span>
         `;
 
@@ -100,6 +100,19 @@ function displayListMembers(members) {
 
 // Get membership level text
 function getMembershipLevel(level) {
+    if (typeof level === 'string') {
+        switch (level.toLowerCase()) {
+            case 'gold':
+                return 'Gold';
+            case 'silver':
+                return 'Silver';
+            case 'bronze':
+            case 'member':
+                return 'Member';
+            default:
+                return 'Member';
+        }
+    }
     switch (level) {
         case 3:
             return 'Gold';

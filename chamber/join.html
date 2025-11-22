@@ -6,302 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Chamber | Mukono Nsauuti Chamber of Commerce</title>
     <meta name="description" content="Join Mukono Nsauuti Chamber of Commerce and become part of our business community. Choose from four membership levels with varying benefits.">
-    <style>
-        /* Global Styles */
-        
-         :root {
-            --primary-color: #0a3f56;
-            --secondary-color: #e9a93c;
-            --accent1-color: #2c5e1a;
-            --accent2-color: #8c1a1a;
-            --text-color: #333;
-            --background-color: #f5f5f5;
-            --card-background: #fff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo img {
-            height: 60px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            margin: 1.5rem 0 1rem;
-        }
-        
-        .container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                grid-template-columns: 2fr 1fr;
-            }
-        }
-        
-        .form-container {
-            background-color: var(--card-background);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .membership-cards {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        @media (min-width: 768px) {
-            .membership-cards {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        .card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s forwards;
-        }
-        
-        .card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        .card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        
-        .card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .card p {
-            margin-bottom: 1rem;
-        }
-        
-        .card .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-        
-        .card .btn:hover {
-            background-color: #d4942a;
-        }
-        
-        form {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        label {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        input,
-        select,
-        textarea {
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(26, 75, 140, 0.2);
-        }
-        
-        button[type="submit"] {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        button[type="submit"]:hover {
-            background-color: #153a6e;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-        
-        .close {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #777;
-        }
-        
-        .close:hover {
-            color: #333;
-        }
-        
-        .modal h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .modal ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .required::after {
-            content: " *";
-            color: var(--accent2-color);
-        }
-        
-        .timestamp {
-            display: none;
-        }
-    </style>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join Mukono Nsauuti Chamber of Commerce">
+    <meta property="og:description" content="Become part of our business community. Choose from four membership levels with varying benefits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mukonochamber.org/join">
+    <meta property="og:image" content="https://www.mukonochamber.org/images/og-image.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles/dero.css">
+    <link rel="stylesheet" href="styles/join.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="https://i.pinimg.com/736x/a5/04/f4/a504f4ad40f48fb0d974d4c2bad25b68.jpg" alt="Mukono Chamber of Commerce Logo" width="60" height="60">
-            <h1>Mukono Nsauuti Chamber of Commerce</h1>
+        <div class="container">
+            <img src="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg" alt="Mukono Nsauuti Chamber Logo" width="50" height="50">
+            <h1>Mukono Nsauuti Chamber Of Commerce</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
@@ -475,57 +211,23 @@
     </div>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Mukono Nsauuti Chamber of Commerce | All rights reserved</p>
-        <p>Contact: info@mukonochamber.org | Phone: +256 712 345 678</p>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Mukono Nsauuti Chamber of Commerce</p>
+                <p>245 Main Street, Mukono</p>
+                <p>Email: info@mukonochamber.org</p>
+                <p>Phone: +256-712-345-678</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Mukono Nsauuti Chamber of Commerce</p>
+                <p>Kalungi Isaac | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Set timestamp when form loads
-        document.addEventListener('DOMContentLoaded', function() {
-            const now = new Date();
-            const timestamp = now.toISOString();
-            document.getElementById('timestamp').value = timestamp;
-        });
-
-        // Modal functionality
-        const modalBtns = document.querySelectorAll('.btn[data-modal]');
-        const modals = document.querySelectorAll('.modal');
-        const closeBtns = document.querySelectorAll('.close');
-
-        modalBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const modalId = this.getAttribute('data-modal');
-                document.getElementById(modalId).style.display = 'flex';
-            });
-        });
-
-        closeBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.closest('.modal').style.display = 'none';
-            });
-        });
-
-        window.addEventListener('click', function(e) {
-            if (e.target.classList.contains('modal')) {
-                e.target.style.display = 'none';
-            }
-        });
-
-        // Form validation for organizational title pattern
-        const titleInput = document.getElementById('title');
-        titleInput.addEventListener('input', function() {
-            const pattern = /^[A-Za-z\s\-]{7,}$/;
-            if (this.value && !pattern.test(this.value)) {
-                this.setCustomValidity('Organizational title must contain only letters, hyphens, and spaces, with a minimum of 7 characters.');
-            } else {
-                this.setCustomValidity('');
-            }
-        });
-    </script>
+    <script src="scripts/join.js"></script>
 </body>
 
 </html>

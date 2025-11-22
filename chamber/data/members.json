@@ -5,7 +5,9 @@
             "phone": "+256 772 456 789",
             "website": "https://mukonoagro.ug",
             "membership": "gold",
-            "description": "Leading agricultural processing company specializing in coffee and maize products for export."
+            "description": "Leading agricultural processing company specializing in coffee and maize products for export.",
+            "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad576?w=400&h=300&fit=crop",
+            "category": "Agriculture"
         },
         {
             "name": "Nile Tech Solutions",
@@ -13,7 +15,9 @@
             "phone": "+256 752 987 654",
             "website": "https://niletech.ug",
             "membership": "silver",
-            "description": "IT services and digital solutions provider for businesses across Central Uganda."
+            "description": "IT services and digital solutions provider for businesses across Central Uganda.",
+            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
+            "category": "Technology"
         },
         {
             "name": "Uganda Crafts Cooperative",
@@ -21,7 +25,9 @@
             "phone": "+256 702 123 456",
             "website": "https://ugandacrafts.ug",
             "membership": "gold",
-            "description": "Promoting local artisans and traditional Ugandan crafts to international markets."
+            "description": "Promoting local artisans and traditional Ugandan crafts to international markets.",
+            "image": "https://images.unsplash.com/photo-1595521868288-b5e0d9d3b6f0?w=400&h=300&fit=crop",
+            "category": "Crafts"
         },
         {
             "name": "Mukono Resort Hotel",
@@ -29,7 +35,9 @@
             "phone": "+256 392 123 456",
             "website": "https://mukonoresort.ug",
             "membership": "silver",
-            "description": "Premium accommodation and conference facilities in the heart of Mukono."
+            "description": "Premium accommodation and conference facilities in the heart of Mukono.",
+            "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+            "category": "Hospitality"
         },
         {
             "name": "Green Valley Farmers Association",
@@ -37,7 +45,9 @@
             "phone": "+256 752 654 321",
             "website": "https://greenvalleyfarmers.ug",
             "membership": "gold",
-            "description": "Cooperative of local farmers promoting sustainable agriculture and fair trade."
+            "description": "Cooperative of local farmers promoting sustainable agriculture and fair trade.",
+            "image": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&h=300&fit=crop",
+            "category": "Agriculture"
         },
         {
             "name": "Mukono Microfinance Institution",
@@ -45,7 +55,9 @@
             "phone": "+256 312 456 789",
             "website": "https://mukonomfi.ug",
             "membership": "silver",
-            "description": "Financial services and business loans supporting local entrepreneurs and small businesses."
+            "description": "Financial services and business loans supporting local entrepreneurs and small businesses.",
+            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+            "category": "Finance"
         },
         {
             "name": "Seeta Hardware & Construction",
@@ -53,7 +65,9 @@
             "phone": "+256 752 111 222",
             "website": "https://seetahardware.ug",
             "membership": "gold",
-            "description": "Quality building materials and construction services for residential and commercial projects."
+            "description": "Quality building materials and construction services for residential and commercial projects.",
+            "image": "https://images.unsplash.com/photo-1541123603104-852f7e610b2d?w=400&h=300&fit=crop",
+            "category": "Construction"
         },
         {
             "name": "Pearl of Africa Tours",
@@ -61,7 +75,9 @@
             "phone": "+256 702 333 444",
             "website": "https://pearlafricatours.ug",
             "membership": "silver",
-            "description": "Local tour operator showcasing Mukono's cultural heritage and natural attractions."
+            "description": "Local tour operator showcasing Mukono's cultural heritage and natural attractions.",
+            "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop",
+            "category": "Tourism"
         },
         {
             "name": "Mukono Medical Center",
@@ -69,7 +85,9 @@
             "phone": "+256 392 765 432",
             "website": "https://mukonomedical.ug",
             "membership": "gold",
-            "description": "Comprehensive healthcare services and medical facilities serving the Mukono community."
+            "description": "Comprehensive healthcare services and medical facilities serving the Mukono community.",
+            "image": "https://images.unsplash.com/photo-1576091160550-112173f31c77?w=400&h=300&fit=crop",
+            "category": "Healthcare"
         },
         {
             "name": "Victoria Fisheries Ltd",
@@ -77,7 +95,9 @@
             "phone": "+256 752 888 999",
             "website": "https://victoriafisheries.ug",
             "membership": "silver",
-            "description": "Fresh fish processing and distribution from Lake Victoria to local and international markets."
+            "description": "Fresh fish processing and distribution from Lake Victoria to local and international markets.",
+            "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+            "category": "Fisheries"
         }
     ]
 }
