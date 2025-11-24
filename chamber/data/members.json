@@ -1,103 +1,92 @@
-{
-    "members": [{
-            "name": "Mukono Agro Processors Ltd",
-            "address": "Plot 15, Industrial Area, Mukono",
-            "phone": "+256 772 456 789",
-            "website": "https://mukonoagro.ug",
-            "membership": "gold",
-            "description": "Leading agricultural processing company specializing in coffee and maize products for export.",
-            "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad576?w=400&h=300&fit=crop",
-            "category": "Agriculture"
-        },
-        {
-            "name": "Nile Tech Solutions",
-            "address": "Mukono Town Center, Main Street",
-            "phone": "+256 752 987 654",
-            "website": "https://niletech.ug",
-            "membership": "silver",
-            "description": "IT services and digital solutions provider for businesses across Central Uganda.",
-            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
-            "category": "Technology"
-        },
-        {
-            "name": "Uganda Crafts Cooperative",
-            "address": "Cultural Village, Seeta Road",
-            "phone": "+256 702 123 456",
-            "website": "https://ugandacrafts.ug",
-            "membership": "gold",
-            "description": "Promoting local artisans and traditional Ugandan crafts to international markets.",
-            "image": "https://images.unsplash.com/photo-1595521868288-b5e0d9d3b6f0?w=400&h=300&fit=crop",
-            "category": "Crafts"
-        },
-        {
-            "name": "Mukono Resort Hotel",
-            "address": "Lakeside Drive, Mukono",
-            "phone": "+256 392 123 456",
-            "website": "https://mukonoresort.ug",
-            "membership": "silver",
-            "description": "Premium accommodation and conference facilities in the heart of Mukono.",
-            "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
-            "category": "Hospitality"
-        },
-        {
-            "name": "Green Valley Farmers Association",
-            "address": "Namilyango Road, Mukono District",
-            "phone": "+256 752 654 321",
-            "website": "https://greenvalleyfarmers.ug",
-            "membership": "gold",
-            "description": "Cooperative of local farmers promoting sustainable agriculture and fair trade.",
-            "image": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&h=300&fit=crop",
-            "category": "Agriculture"
-        },
-        {
-            "name": "Mukono Microfinance Institution",
-            "address": "Banking Street, Central Mukono",
-            "phone": "+256 312 456 789",
-            "website": "https://mukonomfi.ug",
-            "membership": "silver",
-            "description": "Financial services and business loans supporting local entrepreneurs and small businesses.",
-            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
-            "category": "Finance"
-        },
-        {
-            "name": "Seeta Hardware & Construction",
-            "address": "Mukono-Jinja Highway, Seeta",
-            "phone": "+256 752 111 222",
-            "website": "https://seetahardware.ug",
-            "membership": "gold",
-            "description": "Quality building materials and construction services for residential and commercial projects.",
-            "image": "https://images.unsplash.com/photo-1541123603104-852f7e610b2d?w=400&h=300&fit=crop",
-            "category": "Construction"
-        },
-        {
-            "name": "Pearl of Africa Tours",
-            "address": "Tourist Center, Mukono Town",
-            "phone": "+256 702 333 444",
-            "website": "https://pearlafricatours.ug",
-            "membership": "silver",
-            "description": "Local tour operator showcasing Mukono's cultural heritage and natural attractions.",
-            "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop",
-            "category": "Tourism"
-        },
-        {
-            "name": "Mukono Medical Center",
-            "address": "Hospital Road, Mukono",
-            "phone": "+256 392 765 432",
-            "website": "https://mukonomedical.ug",
-            "membership": "gold",
-            "description": "Comprehensive healthcare services and medical facilities serving the Mukono community.",
-            "image": "https://images.unsplash.com/photo-1576091160550-112173f31c77?w=400&h=300&fit=crop",
-            "category": "Healthcare"
-        },
-        {
-            "name": "Victoria Fisheries Ltd",
-            "address": "Lakeside, Ggaba Road",
-            "phone": "+256 752 888 999",
-            "website": "https://victoriafisheries.ug",
-            "membership": "silver",
-            "description": "Fresh fish processing and distribution from Lake Victoria to local and international markets.",
-            "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-            "category": "Fisheries"
-        }
-    ]
-}
+[
+    {
+        "name": "Mukono Resort Hotel",
+        "address": "123 Resort Road, Mukono",
+        "phone": "+256-772-123456",
+        "website": "https://mukonoresort.ug",
+        "image": "https://images.unsplash.com/photo-1689729771136-46e2ee831b83?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzb3J0JTIwaG90ZWwlMjByb29tfGVufDB8fDB8fHww",
+        "membershipLevel": "Gold",
+        "tagline": "Your comfort is our priority"
+    },
+    {
+        "name": "Tech Solutions Uganda",
+        "address": "456 Innovation Street, Mukono",
+        "phone": "+256-772-234567",
+        "website": "https://techsolutions.ug",
+        "image": "https://plus.unsplash.com/premium_vector-1682309080127-19d3a6214a17?w=352&dpr=2&h=367&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+        "membershipLevel": "Gold",
+        "tagline": "Innovative IT solutions for modern businesses"
+    },
+    {
+        "name": "Nasuuti Coffee Processors",
+        "address": "789 Coffee Lane, Nasuuti",
+        "phone": "+256-772-345678",
+        "website": "https://nasuurticoffee.ug",
+        "image": "https://images.unsplash.com/photo-1533776992670-a72f4c28235e?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwY3VwfGVufDB8fDB8fHww",
+        "membershipLevel": "Silver",
+        "tagline": "From farm to cup - Excellence in every bean"
+    },
+    {
+        "name": "Mukono Medical Center",
+        "address": "321 Health Avenue, Mukono",
+        "phone": "+256-772-456789",
+        "website": "https://mukonomedical.ug",
+        "image": "https://plus.unsplash.com/premium_photo-1731410156798-5740083971ef?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBudXJzZXN8ZW58MHx8MHx8fDA%3D",
+        "membershipLevel": "Gold",
+        "tagline": "Quality healthcare for all"
+    },
+    {
+        "name": "Green Valley Supermarket",
+        "address": "654 Market Street, Mukono",
+        "phone": "+256-772-567890",
+        "website": "https://greenvalley.ug",
+        "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VwZXJtYXJrZXR8ZW58MHx8MHx8fDA%3D",
+        "membershipLevel": "Silver",
+        "tagline": "Fresh produce, happy customers"
+    },
+    {
+        "name": "Mukono Auto Services",
+        "address": "987 Garage Road, Mukono",
+        "phone": "+256-772-678901",
+        "website": "https://mukonoauto.ug",
+        "image": "https://images.unsplash.com/photo-1606577924006-27d39b132ae2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF1dG8lMjBzZXJ2aWNlfGVufDB8fDB8fHww",
+        "membershipLevel": "Silver",
+        "tagline": "Expert car care and maintenance"
+    },
+    {
+        "name": "Nasuuti Fashion Boutique",
+        "address": "147 Fashion Plaza, Nasuuti",
+        "phone": "+256-772-789012",
+        "website": "https://nasuutifashion.ug",
+        "image": "https://plus.unsplash.com/premium_photo-1664872565896-8067511b6e05?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym90aXF1ZXxlbnwwfHwwfHx8MA%3D%3D",
+        "membershipLevel": "Bronze",
+        "tagline": "Style meets elegance"
+    },
+    {
+        "name": "Mukono Construction Ltd",
+        "address": "258 Builder's Avenue, Mukono",
+        "phone": "+256-772-890123",
+        "website": "https://mukonoconstruction.ug",
+        "image": "https://plus.unsplash.com/premium_photo-1661685150082-5c2153b507c2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fDB8fHww",
+        "membershipLevel": "Gold",
+        "tagline": "Building dreams into reality"
+    },
+    {
+        "name": "Smart Education Center",
+        "address": "369 Learning Lane, Mukono",
+        "phone": "+256-772-901234",
+        "website": "https://smarteducation.ug",
+        "image": "https://media.istockphoto.com/id/887302366/photo/portrait-of-male-teenage-student-in-uniform-outside-buildings.webp?a=1&b=1&s=612x612&w=0&k=20&c=dLNZCO6Fixylzh7JsG_eP9vwDuAovEjrT8E9wy5fVpQ=",
+        "membershipLevel": "Silver",
+        "tagline": "Empowering minds for tomorrow"
+    },
+    {
+        "name": "Lake Victoria Fisheries",
+        "address": "741 Lakeside Drive, Mukono",
+        "phone": "+256-772-012345",
+        "website": "https://lvfisheries.ug",
+        "image": "https://images.unsplash.com/photo-1700219987725-7cd3a0d69512?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGFrZSUyMHZpY3RvcmlhfGVufDB8fDB8fHww",
+        "membershipLevel": "Bronze",
+        "tagline": "Fresh catch, daily"
+    }
+]

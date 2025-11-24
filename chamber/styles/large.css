@@ -15,13 +15,35 @@
         height: 60px;
     }
 
+    /* Keep hamburger menu on large screens too */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background: linear-gradient(180deg, var(--primary-color) 0%, #1a4f8a 100%);
+        width: 100%;
+        text-align: center;
+        transition: left 0.4s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
     .nav-menu li {
-        margin: 0 1rem;
+        margin: 0.8rem 0;
     }
 
     .nav-menu a {
         font-size: 1.1rem;
-        padding: 0.6rem 1.2rem;
+        padding: 0.8rem 1.5rem;
     }
 
     /* Main Content */
@@ -35,12 +57,11 @@
 
     /* Hero Section */
     .hero {
-        height: 600px;
-        padding-right: 5rem;
+        height: 650px;
     }
 
     .hero-content {
-        max-width: 500px;
+        max-width: 550px;
         padding: 4rem 3rem;
     }
 
