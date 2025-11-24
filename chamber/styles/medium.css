@@ -10,39 +10,19 @@
         font-size: 1.5rem;
     }
 
-    /* Keep hamburger menu visible on all screen sizes */
+    /* Keep sidebar navigation on tablet */
     .hamburger {
         display: flex;
     }
 
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: linear-gradient(180deg, var(--primary-color) 0%, #1a4f8a 100%);
-        width: 100%;
-        text-align: center;
-        transition: left 0.4s ease;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
-        padding: 2rem 0;
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 0.5rem 0;
+        width: 320px;
+        left: -320px;
     }
 
     .nav-menu a {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        margin: 0 1rem;
+        font-size: 1.15rem;
+        padding: 1.2rem 2rem;
     }
 
     /* Hero Section */

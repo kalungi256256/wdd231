@@ -37,7 +37,7 @@ header {
     color: white;
     padding: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: relative;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -92,6 +92,7 @@ header {
     z-index: 1001;
     border-radius: 4px;
     transition: var(--transition);
+    position: relative;
 }
 
 .hamburger:hover {
@@ -124,6 +125,25 @@ header {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
+/* Overlay for sidebar */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 998;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Navigation Menu - Mobile */
 nav {
     position: relative;
@@ -131,17 +151,18 @@ nav {
 
 .nav-menu {
     position: fixed;
-    left: -100%;
-    top: 80px;
+    left: -300px;
+    top: 0;
+    height: 100vh;
     flex-direction: column;
     background: linear-gradient(180deg, var(--primary-color) 0%, #1a4f8a 100%);
-    width: 100%;
-    text-align: center;
+    width: 280px;
+    text-align: left;
     transition: left 0.4s ease;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
-    padding: 2rem 0;
-    max-height: calc(100vh - 80px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
+    padding: 5rem 0 2rem 0;
     overflow-y: auto;
+    z-index: 999;
 }
 
 .nav-menu.active {
@@ -150,7 +171,8 @@ nav {
 
 .nav-menu li {
     list-style: none;
-    margin: 0.5rem 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-menu a {
@@ -158,22 +180,22 @@ nav {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     display: block;
     transition: var(--transition);
-    border-radius: 8px;
-    margin: 0 1rem;
+    border-left: 4px solid transparent;
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    transform: translateX(5px);
+    background-color: rgba(244, 162, 97, 0.2);
+    border-left-color: var(--secondary-color);
+    padding-left: 2.5rem;
 }
 
 .nav-menu a.active {
-    background-color: var(--accent-color);
+    background-color: rgba(231, 111, 81, 0.2);
+    border-left-color: var(--accent-color);
     font-weight: 600;
 }
 

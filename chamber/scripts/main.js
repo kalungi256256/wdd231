@@ -9,10 +9,24 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
+
 if (hamburger && navMenu) {
+    // Toggle menu on hamburger click
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 
     // Close menu when clicking a navigation link
@@ -20,14 +34,26 @@ if (hamburger && navMenu) {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 }
@@ -38,12 +64,12 @@ if (hamburger && navMenu) {
 // ========================================
 
 const WEATHER_CONFIG = {
-    apiKey: '4b6617030376791602a616bc73c4e742', 
+    apiKey: '9ba6ea9ffb6c3c19c77e3d70a223c4d8', // Replace with your API key from openweathermap.org
     city: 'Mukono',
     country: 'UG',
     units: 'metric', // metric for Celsius, imperial for Fahrenheit
-    lat: 0.3678,     // Mukono coordinates
-    lon: 32.7638
+    lat: 0.3531,     // Mukono coordinates
+    lon: 32.7554
 };
 
 
@@ -218,8 +244,8 @@ function displayCompanySpotlight(companies) {
                      onerror="this.src='images/placeholder.jpg'">
                 <h3>${company.name}</h3>
                 ${company.tagline ? `<p class="company-tagline">"${company.tagline}"</p>` : ''}
-                <p>${company.phone}</p>
-                <p> ${company.address}</p>
+                <p><strong>📞</strong> ${company.phone}</p>
+                <p><strong>📍</strong> ${company.address}</p>
                 <span class="membership-badge ${company.membershipLevel.toLowerCase()}">
                     ${company.membershipLevel} Member
                 </span>
