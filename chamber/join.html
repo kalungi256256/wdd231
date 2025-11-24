@@ -39,7 +39,7 @@
             <div class="logo">
                 <img src="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg" alt="Mukono Chamber Logo" width="60" height="60">
                 <div class="logo-text">
-                    <h1>Mukono Nasuuti</h1>
+                    <p class="logo-title"><strong>Mukono Nasuuti</strong></p>
                     <p class="logo-subtitle">Chamber of Commerce</p>
                 </div>
             </div>
@@ -167,12 +167,12 @@
                     
                     <label for="firstName">
                         First Name *
-                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Enter your first name">
                     </label>
                     
                     <label for="lastName">
                         Last Name *
-                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Enter your last name">
                     </label>
                     
                     <label for="title">
@@ -182,12 +182,12 @@
                     
                     <label for="email">
                         Email Address *
-                        <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+                        <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email" title="Enter a valid email address">
                     </label>
                     
                     <label for="phone">
                         Mobile Phone *
-                        <input type="tel" id="phone" name="phone" required placeholder="+256-xxx-xxxxxx" autocomplete="tel">
+                        <input type="tel" id="phone" name="phone" required placeholder="+256-xxx-xxxxxx" autocomplete="tel" title="Enter your mobile phone number">
                     </label>
                 </fieldset>
 
@@ -197,22 +197,22 @@
                     
                     <label for="businessName">
                         Business/Organization Name *
-                        <input type="text" id="businessName" name="businessName" required autocomplete="organization">
+                        <input type="text" id="businessName" name="businessName" required autocomplete="organization" title="Enter your business or organization name">
                     </label>
                     
                     <label for="businessAddress">
                         Business Address
-                        <input type="text" id="businessAddress" name="businessAddress" autocomplete="street-address">
+                        <input type="text" id="businessAddress" name="businessAddress" autocomplete="address-line1" title="Enter your business address">
                     </label>
                     
                     <label for="website">
                         Website URL
-                        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" title="Enter your website URL">
                     </label>
                     
                     <label for="description">
                         Business Description
-                        <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..."></textarea>
+                        <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..." title="Describe your business or organization"></textarea>
                     </label>
                 </fieldset>
 
@@ -222,7 +222,7 @@
                     
                     <label for="membershipLevel">
                         Choose Membership Level *
-                        <select id="membershipLevel" name="membershipLevel" required>
+                        <select id="membershipLevel" name="membershipLevel" required title="Select your desired membership level">
                             <option value="">Select a membership level</option>
                             <option value="np">NP Membership (Free)</option>
                             <option value="bronze">Bronze Membership (50,000 UGX/year)</option>
