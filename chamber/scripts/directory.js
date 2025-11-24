@@ -1,150 +1,168 @@
-// DOM Elements (use fallbacks because directory script is used on multiple pages)
-const memberContainer = document.getElementById('memberContainer') || document.getElementById('directory') || document.querySelector('.member-container');
-const gridViewBtn = document.getElementById('gridView') || document.getElementById('gridBtn');
-const listViewBtn = document.getElementById('listView') || document.getElementById('listBtn');
-const menuToggle = document.querySelector('.menu-toggle') || document.getElementById('menuButton') || document.getElementById('hamburger-btn');
-const navMenu = document.querySelector('.nav-menu') || document.getElementById('navMenu') || document.getElementById('nav-menu');
+// ===== Mobile Navigation Toggle =====
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-// Current year and last modified (set if elements exist)
-const currentYearEl = document.getElementById('currentYear') || document.getElementById('current-year') || document.getElementById('year');
-if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
-const lastModifiedEl = document.getElementById('lastModified') || document.getElementById('last-modified');
-if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
 
-// Mobile menu toggle (guard if controls exist)
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-        const isExpanded = navMenu.classList.contains('show');
-        menuToggle.setAttribute('aria-expanded', isExpanded);
-    });
+// Toggle menu function
+function toggleMenu() {
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
 }
 
-// Fetch members data
+// Event listeners for menu
+menuToggle.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+
+// Close menu when clicking a link
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
+// ===== View Toggle Functionality =====
+const gridViewBtn = document.getElementById('gridView');
+const listViewBtn = document.getElementById('listView');
+const memberContainer = document.getElementById('memberContainer');
+
+// Grid view event listener
+gridViewBtn.addEventListener('click', () => {
+    memberContainer.className = 'grid-view';
+    gridViewBtn.classList.add('active');
+    listViewBtn.classList.remove('active');
+    localStorage.setItem('viewMode', 'grid');
+});
+
+// List view event listener
+listViewBtn.addEventListener('click', () => {
+    memberContainer.className = 'list-view';
+    listViewBtn.classList.add('active');
+    gridViewBtn.classList.remove('active');
+    localStorage.setItem('viewMode', 'list');
+});
+
+// Load saved view preference
+const savedView = localStorage.getItem('viewMode');
+if (savedView === 'list') {
+    listViewBtn.click();
+}
+
+// ===== Fetch and Display Members =====
+const membersURL = 'data/members.json'; // Update this path to your JSON file
+
 async function fetchMembers() {
     try {
-        const response = await fetch('data/members.json');
-        if (!response.ok) throw new Error('Network response was not ok');
+        // Show loading state
+        memberContainer.innerHTML = '<div class="loading">Loading members...</div>';
+        
+        const response = await fetch(membersURL);
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch members');
+        }
+        
         const data = await response.json();
-        // Support two shapes: an array directly, or { members: [...] }
-        if (Array.isArray(data)) return data;
-        if (data && Array.isArray(data.members)) return data.members;
-        console.warn('Unexpected members.json format — expected array or { members: [...] }');
-        return [];
+        displayMembers(data.members || data);
+        
     } catch (error) {
         console.error('Error fetching members:', error);
-        return [];
+        memberContainer.innerHTML = `
+            <div class="no-members">
+                <h3>Unable to Load Members</h3>
+                <p>Please check your connection and try again.</p>
+            </div>
+        `;
     }
 }
 
-// Display members in grid view
-function displayGridMembers(members) {
-    memberContainer.className = 'grid-view';
+// Display members function
+function displayMembers(members) {
     memberContainer.innerHTML = '';
-
-    members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.className = 'member-card';
-
-        const membershipText = getMembershipLevel(member.membership);
-
-        // Resolve image source: accept absolute URLs, paths starting with '/', or plain filenames
-        let imgSrc = member.image || 'images/placeholder.svg';
-        if (imgSrc && !/^https?:\/\//i.test(imgSrc) && !imgSrc.startsWith('/') && !imgSrc.startsWith('images/')) {
-            imgSrc = `images/${imgSrc}`;
-        }
-
-        memberCard.innerHTML = `
-            <img src="${imgSrc}" alt="${member.name}" loading="lazy" onerror="this.src='images/placeholder.svg';">
-            <h3>${member.name}</h3>
-            <p>${member.address || ''}</p>
-            <p>${member.phone || ''}</p>
-            <p><a href="${member.website || '#'}" target="_blank" rel="noopener">Visit Website</a></p>
-            <p>Category: ${member.category || 'N/A'}</p>
-            <span class="membership-level ${membershipText.toLowerCase()}">${membershipText} Member</span>
+    
+    if (!members || members.length === 0) {
+        memberContainer.innerHTML = `
+            <div class="no-members">
+                <h3>No Members Found</h3>
+                <p>Check back soon for new members!</p>
+            </div>
         `;
-
+        return;
+    }
+    
+    members.forEach(member => {
+        const memberCard = createMemberCard(member);
         memberContainer.appendChild(memberCard);
     });
 }
 
-// Display members in list view
-function displayListMembers(members) {
-    memberContainer.className = 'list-view';
-    memberContainer.innerHTML = '';
-
-    members.forEach(member => {
-        const memberItem = document.createElement('div');
-        memberItem.className = 'member-item';
-
-        const membershipText = getMembershipLevel(member.membershipLevel);
-
-        memberItem.innerHTML = `
-            <div>
-                <h3>${member.name}</h3>
-                <span class="membership-level ${membershipText.toLowerCase()}">${membershipText}</span>
-            </div>
-            <div>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <p>${member.category}</p>
-            </div>
-            <div>
-                <a href="${member.website}" target="_blank">Website</a>
-            </div>
-        `;
-
-        memberContainer.appendChild(memberItem);
-    });
+// Create member card element
+function createMemberCard(member) {
+    const card = document.createElement('div');
+    card.classList.add('member-card');
+    
+    // Determine membership level class
+    const levelClass = member.membershipLevel ? member.membershipLevel.toLowerCase() : 'basic';
+    
+    // Create card HTML
+    card.innerHTML = `
+        <img src="${member.image || 'images/placeholder.png'}" alt="${member.name} logo" loading="lazy">
+        <div class="member-info">
+            <h3>${member.name}</h3>
+            <p class="member-address">${member.address || 'Address not available'}</p>
+            <p class="member-phone">${member.phone || 'Phone not available'}</p>
+            ${member.website ? `<a href="${member.website}" target="_blank" rel="noopener noreferrer" class="member-url">Visit Website</a>` : ''}
+        </div>
+        <span class="membership-level ${levelClass}">${member.membershipLevel || 'Basic'}</span>
+    `;
+    
+    return card;
 }
 
-// Get membership level text
-function getMembershipLevel(level) {
-    if (typeof level === 'string') {
-        switch (level.toLowerCase()) {
-            case 'gold':
-                return 'Gold';
-            case 'silver':
-                return 'Silver';
-            case 'bronze':
-            case 'member':
-                return 'Member';
-            default:
-                return 'Member';
-        }
-    }
-    switch (level) {
-        case 3:
-            return 'Gold';
-        case 2:
-            return 'Silver';
-        case 1:
-            return 'Member';
-        default:
-            return 'Member';
-    }
+// ===== Footer Dynamic Content =====
+// Update current year
+const currentYearSpan = document.getElementById('currentYear');
+if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
 }
 
-// View toggle functionality
-gridViewBtn.addEventListener('click', async() => {
-    gridViewBtn.classList.add('active');
-    listViewBtn.classList.remove('active');
-    const members = await fetchMembers();
-    displayGridMembers(members);
+// Update last modified date
+const lastModifiedSpan = document.getElementById('lastModified');
+if (lastModifiedSpan) {
+    lastModifiedSpan.textContent = document.lastModified;
+}
+
+// ===== Initialize Page =====
+document.addEventListener('DOMContentLoaded', () => {
+    fetchMembers();
 });
 
-listViewBtn.addEventListener('click', async() => {
-    listViewBtn.classList.add('active');
-    gridViewBtn.classList.remove('active');
-    const members = await fetchMembers();
-    displayListMembers(members);
-});
-
-// Initialize page
-async function init() {
-    const members = await fetchMembers();
-    displayGridMembers(members);
+// ===== Sample JSON Structure (for reference) =====
+/*
+{
+  "members": [
+    {
+      "name": "ABC Company",
+      "address": "123 Main Street, Mukono",
+      "phone": "+256-700-123-456",
+      "website": "https://www.abccompany.com",
+      "image": "images/abc-logo.png",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "XYZ Business",
+      "address": "456 Business Ave, Mukono",
+      "phone": "+256-700-789-012",
+      "website": "https://www.xyzbusiness.com",
+      "image": "images/xyz-logo.png",
+      "membershipLevel": "Silver"
+    }
+  ]
 }
-
-// Start the application
-init();
+*/
