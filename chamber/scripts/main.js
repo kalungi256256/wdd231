@@ -244,8 +244,8 @@ function displayCompanySpotlight(companies) {
                      onerror="this.src='images/placeholder.jpg'">
                 <h3>${company.name}</h3>
                 ${company.tagline ? `<p class="company-tagline">"${company.tagline}"</p>` : ''}
-                <p><strong>📞</strong> ${company.phone}</p>
-                <p><strong>📍</strong> ${company.address}</p>
+                <p>${company.phone}</p>
+                <p>${company.address}</p>
                 <span class="membership-badge ${company.membershipLevel.toLowerCase()}">
                     ${company.membershipLevel} Member
                 </span>

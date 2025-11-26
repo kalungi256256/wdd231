@@ -97,6 +97,7 @@ header {
 
 .hamburger:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    animation: neon-pulse;
 }
 
 .hamburger:focus {
@@ -270,7 +271,7 @@ h2 {
     text-align: center;
     color: white;
     background: rgba(56, 98, 160, 0.95);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(-40rem);
     padding: 2.5rem 2rem;
     border-radius: var(--border-radius);
     max-width: 90%;

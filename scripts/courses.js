@@ -154,3 +154,18 @@ function updateCreditsSummary(coursesToDisplay) {
         totalCreditsElement.textContent = totalCredits;
     }
 }
+function updateFooter(){
+    // Current Year import
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan){
+     yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Last modified content
+    const modifiedSpan = document.getElementById('last-Modified');
+        if (modifiedSpan) {
+            modifiedSpan.textContent = document.lastModified
+
+        }
+    
+}
