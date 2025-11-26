@@ -161,7 +161,8 @@ function displayCurrentWeather(data) {
 
 async function fetchWeatherForecast() {
     // Check if API key is set
-    if (!WEATHER_CONFIG.apiKey || WEATHER_CONFIG.apiKey === 'YOUR_OPENWEATHER_API_KEY_HERE') {
+    if (!WEATHER_CONFIG.apiKey || WEATHER_CONFIG.apiKey === '4b6617030376791602a616bc73c4e742')
+ {
         displayMockForecast();
         return;
     }
@@ -306,8 +307,8 @@ function displayCompanySpotlight(companies) {
                      onerror="this.src='images/placeholder.jpg'">
                 <h3>${company.name}</h3>
                 ${company.tagline ? `<p class="company-tagline">"${company.tagline}"</p>` : ''}
-                <p><strong>📞</strong> ${company.phone}</p>
-                <p><strong>📍</strong> ${company.address}</p>
+                <p><strong>☎️</strong> ${company.phone}</p>
+                <p><strong>🏭</strong> ${company.address}</p>
                 <span class="membership-badge ${company.membershipLevel.toLowerCase()}">
                     ${company.membershipLevel} Member
                 </span>
