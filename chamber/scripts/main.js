@@ -64,7 +64,7 @@ if (hamburger && navMenu) {
 // ========================================
 
 const WEATHER_CONFIG = {
-    apiKey: '9ba6ea9ffb6c3c19c77e3d70a223c4d8', // Replace with your API key from openweathermap.org
+    apiKey: 'YOUR_OPENWEATHER_API_KEY_HERE', // Get free key from openweathermap.org
     city: 'Mukono',
     country: 'UG',
     units: 'metric', // metric for Celsius, imperial for Fahrenheit
@@ -78,6 +78,12 @@ const WEATHER_CONFIG = {
 // ========================================
 
 async function fetchCurrentWeather() {
+    // Check if API key is set
+    if (!WEATHER_CONFIG.apiKey || WEATHER_CONFIG.apiKey === 'YOUR_OPENWEATHER_API_KEY_HERE') {
+        displayMockCurrentWeather();
+        return;
+    }
+    
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${WEATHER_CONFIG.city},${WEATHER_CONFIG.country}&appid=${WEATHER_CONFIG.apiKey}&units=${WEATHER_CONFIG.units}`;
     
     try {
@@ -91,9 +97,30 @@ async function fetchCurrentWeather() {
         displayCurrentWeather(data);
     } catch (error) {
         console.error('Error fetching current weather:', error);
-        document.getElementById('current-weather').innerHTML = 
-            '<p style="color: #e76f51; text-align: center;">Unable to load weather data. Please try again later.</p>';
+        displayMockCurrentWeather(); // Show mock data on error
     }
+}
+
+// Display mock weather data
+function displayMockCurrentWeather() {
+    const weatherDiv = document.getElementById('current-weather');
+    
+    weatherDiv.innerHTML = `
+        <div class="weather-current">
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" 
+                 alt="Light rain">
+            <div class="weather-info">
+                <h3>24°C</h3>
+                <p style="text-transform: capitalize; font-weight: 600; color: #264653;">Light rain</p>
+                <p><strong>Feels like:</strong> 26°C</p>
+                <p><strong>Humidity:</strong> 78%</p>
+                <p><strong>Wind:</strong> 3.5 m/s</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    <em>Demo data - Add your API key for live weather</em>
+                </p>
+            </div>
+        </div>
+    `;
 }
 
 
@@ -133,6 +160,12 @@ function displayCurrentWeather(data) {
 // ========================================
 
 async function fetchWeatherForecast() {
+    // Check if API key is set
+    if (!WEATHER_CONFIG.apiKey || WEATHER_CONFIG.apiKey === 'YOUR_OPENWEATHER_API_KEY_HERE') {
+        displayMockForecast();
+        return;
+    }
+    
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${WEATHER_CONFIG.city},${WEATHER_CONFIG.country}&appid=${WEATHER_CONFIG.apiKey}&units=${WEATHER_CONFIG.units}`;
     
     try {
@@ -146,9 +179,38 @@ async function fetchWeatherForecast() {
         displayForecast(data);
     } catch (error) {
         console.error('Error fetching forecast:', error);
-        document.getElementById('forecast-weather').innerHTML = 
-            '<p style="color: #e76f51; text-align: center;">Unable to load forecast data. Please try again later.</p>';
+        displayMockForecast(); // Show mock data on error
     }
+}
+
+// Display mock forecast data
+function displayMockForecast() {
+    const forecastDiv = document.getElementById('forecast-weather');
+    
+    const mockForecast = [
+        { day: 'Thu', date: 'Nov 28', temp: 25, icon: '10d', desc: 'Light rain' },
+        { day: 'Fri', date: 'Nov 29', temp: 26, icon: '02d', desc: 'Partly cloudy' },
+        { day: 'Sat', date: 'Nov 30', temp: 27, icon: '01d', desc: 'Clear sky' }
+    ];
+    
+    let forecastHTML = '<div class="forecast-container">';
+    
+    mockForecast.forEach(day => {
+        forecastHTML += `
+            <div class="forecast-day">
+                <h4>${day.day}</h4>
+                <p style="font-size: 0.85rem; color: #666;">${day.date}</p>
+                <img src="https://openweathermap.org/img/wn/${day.icon}.png" 
+                     alt="${day.desc}">
+                <p style="font-size: 1.3rem; font-weight: bold; color: #264653;">${day.temp}°C</p>
+                <p class="forecast-desc">${day.desc}</p>
+            </div>
+        `;
+    });
+    
+    forecastHTML += '</div>';
+    forecastHTML += '<p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 1rem;"><em>Demo data - Add your API key for live forecast</em></p>';
+    forecastDiv.innerHTML = forecastHTML;
 }
 
 
@@ -244,8 +306,8 @@ function displayCompanySpotlight(companies) {
                      onerror="this.src='images/placeholder.jpg'">
                 <h3>${company.name}</h3>
                 ${company.tagline ? `<p class="company-tagline">"${company.tagline}"</p>` : ''}
-                <p>${company.phone}</p>
-                <p>${company.address}</p>
+                <p><strong>📞</strong> ${company.phone}</p>
+                <p><strong>📍</strong> ${company.address}</p>
                 <span class="membership-badge ${company.membershipLevel.toLowerCase()}">
                     ${company.membershipLevel} Member
                 </span>
