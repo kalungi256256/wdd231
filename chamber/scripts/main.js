@@ -58,9 +58,30 @@ if (hamburger && navMenu) {
     });
 }
 
+// ========================================
+// 2. SAFE ELEMENT SELECTOR WITH NULL CHECK
+// ========================================
+
+function safeQuerySelector(selector) {
+    const element = document.querySelector(selector);
+    if (!element) {
+        console.warn(`Element not found: ${selector}`);
+        return null;
+    }
+    return element;
+}
+
+function safeGetElementById(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        console.warn(`Element not found: #${id}`);
+        return null;
+    }
+    return element;
+}
 
 // ========================================
-// 2. WEATHER API CONFIGURATION
+// 3. WEATHER API CONFIGURATION
 // ========================================
 
 const WEATHER_CONFIG = {
@@ -72,12 +93,17 @@ const WEATHER_CONFIG = {
     lon: 32.7554
 };
 
-
 // ========================================
-// 3. FETCH CURRENT WEATHER
+// 4. FETCH CURRENT WEATHER (WITH NULL CHECK)
 // ========================================
 
 async function fetchCurrentWeather() {
+    const weatherDiv = safeGetElementById('current-weather');
+    if (!weatherDiv) {
+        console.log('Current weather element not found - skipping weather fetch');
+        return;
+    }
+
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${WEATHER_CONFIG.city},${WEATHER_CONFIG.country}&appid=${WEATHER_CONFIG.apiKey}&units=${WEATHER_CONFIG.units}`;
     
     try {
@@ -91,19 +117,21 @@ async function fetchCurrentWeather() {
         displayCurrentWeather(data);
     } catch (error) {
         console.error('Error fetching current weather:', error);
-        document.getElementById('current-weather').innerHTML = 
-            '<p style="color: #e76f51; text-align: center;">Unable to load weather data. Please check your connection.</p>';
+        if (weatherDiv) {
+            weatherDiv.innerHTML = 
+                '<p style="color: #e76f51; text-align: center;">Unable to load weather data. Please check your connection.</p>';
+        }
     }
 }
 
-
 // ========================================
-// 4. DISPLAY CURRENT WEATHER
+// 5. DISPLAY CURRENT WEATHER (WITH NULL CHECK)
 // ========================================
 
 function displayCurrentWeather(data) {
-    const weatherDiv = document.getElementById('current-weather');
-    
+    const weatherDiv = safeGetElementById('current-weather');
+    if (!weatherDiv) return;
+
     const temp = Math.round(data.main.temp);
     const feelsLike = Math.round(data.main.feels_like);
     const description = data.weather[0].description;
@@ -126,12 +154,17 @@ function displayCurrentWeather(data) {
     `;
 }
 
-
 // ========================================
-// 5. FETCH 5-DAY WEATHER FORECAST
+// 6. FETCH 5-DAY WEATHER FORECAST (WITH NULL CHECK)
 // ========================================
 
 async function fetchWeatherForecast() {
+    const forecastDiv = safeGetElementById('forecast-weather');
+    if (!forecastDiv) {
+        console.log('Forecast weather element not found - skipping forecast fetch');
+        return;
+    }
+
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${WEATHER_CONFIG.city},${WEATHER_CONFIG.country}&appid=${WEATHER_CONFIG.apiKey}&units=${WEATHER_CONFIG.units}`;
     
     try {
@@ -145,18 +178,20 @@ async function fetchWeatherForecast() {
         displayForecast(data);
     } catch (error) {
         console.error('Error fetching forecast:', error);
-        document.getElementById('forecast-weather').innerHTML = 
-            '<p style="color: #e76f51; text-align: center;">Unable to load forecast data. Please check your connection.</p>';
+        if (forecastDiv) {
+            forecastDiv.innerHTML = 
+                '<p style="color: #e76f51; text-align: center;">Unable to load forecast data. Please check your connection.</p>';
+        }
     }
 }
 
-
 // ========================================
-// 6. DISPLAY 5-DAY WEATHER FORECAST
+// 7. DISPLAY 5-DAY WEATHER FORECAST (WITH NULL CHECK)
 // ========================================
 
 function displayForecast(data) {
-    const forecastDiv = document.getElementById('forecast-weather');
+    const forecastDiv = safeGetElementById('forecast-weather');
+    if (!forecastDiv) return;
     
     // Get forecasts for next 5 days at noon (12:00:00)
     const middayForecasts = data.list.filter(item => 
@@ -189,12 +224,17 @@ function displayForecast(data) {
     forecastDiv.innerHTML = forecastHTML;
 }
 
-
 // ========================================
-// 7. FETCH COMPANY SPOTLIGHT DATA
+// 8. FETCH COMPANY SPOTLIGHT DATA (WITH NULL CHECK)
 // ========================================
 
 async function fetchCompanySpotlight() {
+    const spotlightDiv = safeGetElementById('spotlight-container');
+    if (!spotlightDiv) {
+        console.log('Spotlight container not found - skipping company spotlight fetch');
+        return;
+    }
+
     try {
         const response = await fetch('data/members.json');
         
@@ -206,18 +246,20 @@ async function fetchCompanySpotlight() {
         displayCompanySpotlight(companies);
     } catch (error) {
         console.error('Error fetching company data:', error);
-        document.getElementById('spotlight-container').innerHTML = 
-            '<p style="color: #e76f51; text-align: center;">Unable to load member spotlight. Please ensure data/members.json exists.</p>';
+        if (spotlightDiv) {
+            spotlightDiv.innerHTML = 
+                '<p style="color: #e76f51; text-align: center;">Unable to load member spotlight. Please ensure data/members.json exists.</p>';
+        }
     }
 }
 
-
 // ========================================
-// 8. DISPLAY COMPANY SPOTLIGHT
+// 9. DISPLAY COMPANY SPOTLIGHT (WITH NULL CHECK)
 // ========================================
 
 function displayCompanySpotlight(companies) {
-    const spotlightDiv = document.getElementById('spotlight-container');
+    const spotlightDiv = safeGetElementById('spotlight-container');
+    if (!spotlightDiv) return;
     
     // Filter for Gold and Silver members only
     const qualifiedMembers = companies.filter(company => 
@@ -259,9 +301,8 @@ function displayCompanySpotlight(companies) {
     spotlightDiv.innerHTML = spotlightHTML;
 }
 
-
 // ========================================
-// 9. HELPER: GET RANDOM COMPANIES
+// 10. HELPER: GET RANDOM COMPANIES
 // ========================================
 
 function getRandomCompanies(array, count) {
@@ -269,53 +310,109 @@ function getRandomCompanies(array, count) {
     return shuffled.slice(0, count);
 }
 
-
 // ========================================
-// 10. FOOTER: CURRENT YEAR & LAST MODIFIED
+// 11. FOOTER: CURRENT YEAR & LAST MODIFIED
 // ========================================
 
 function updateFooter() {
     // Set current year
-    const yearSpan = document.getElementById('currentYear');
+    const yearSpan = safeGetElementById('currentYear');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
     
     // Set last modified date
-    const modifiedSpan = document.getElementById('lastModified');
+    const modifiedSpan = safeGetElementById('lastModified');
     if (modifiedSpan) {
         modifiedSpan.textContent = document.lastModified;
     }
 }
 
+// ========================================
+// 12. VISIT TRACKING FOR DISCOVER PAGE
+// ========================================
+
+function trackVisit() {
+    const visitInfo = safeGetElementById('visit-info');
+    const lastVisit = safeGetElementById('last-visit');
+    const daysBetween = safeGetElementById('days-between');
+    
+    if (!visitInfo || !lastVisit || !daysBetween) {
+        console.log('Visit tracking elements not found - skipping visit tracking');
+        return;
+    }
+
+    const now = new Date();
+    const lastVisitDate = localStorage.getItem('lastVisit');
+    const currentVisitCount = parseInt(localStorage.getItem('visitCount') || '0');
+
+    // Update visit count
+    localStorage.setItem('visitCount', (currentVisitCount + 1).toString());
+    
+    if (lastVisitDate) {
+        const lastVisit = new Date(lastVisitDate);
+        const timeDiff = now - lastVisit;
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        
+        // Update display
+        lastVisit.textContent = lastVisit.toLocaleDateString();
+        daysBetween.textContent = daysDiff;
+        
+        if (daysDiff === 0) {
+            visitInfo.textContent = "Back so soon! Awesome!";
+        } else if (daysDiff === 1) {
+            visitInfo.textContent = "You last visited 1 day ago.";
+        } else {
+            visitInfo.textContent = `You last visited ${daysDiff} days ago.`;
+        }
+    } else {
+        // First visit
+        visitInfo.textContent = "Welcome! Let us know if you have any questions.";
+        lastVisit.textContent = "This is your first visit!";
+        daysBetween.textContent = "0";
+    }
+    
+    // Store current visit
+    localStorage.setItem('lastVisit', now.toString());
+}
 
 // ========================================
-// 11. INITIALIZE ALL FUNCTIONS ON PAGE LOAD
+// 13. INITIALIZE ALL FUNCTIONS ON PAGE LOAD
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Mukono Chamber website loaded successfully!');
     
-    // Initialize footer
+    // Initialize footer (exists on all pages)
     updateFooter();
     
-    // Initialize weather
-    fetchCurrentWeather();
-    fetchWeatherForecast();
+    // Check which page we're on and initialize accordingly
+    const currentPage = window.location.pathname;
     
-    // Initialize company spotlight
-    fetchCompanySpotlight();
-    
-    // Refresh weather every 30 minutes (1800000 milliseconds)
-    setInterval(() => {
+    if (currentPage.includes('index.html') || currentPage === '/') {
+        // Homepage - initialize weather and spotlight
+        console.log('Initializing homepage features...');
         fetchCurrentWeather();
         fetchWeatherForecast();
-    }, 1800000);
+        fetchCompanySpotlight();
+    } else if (currentPage.includes('discover.html')) {
+        // Discover page - initialize visit tracking
+        console.log('Initializing discover page features...');
+        trackVisit();
+    }
+    
+    // Only set up weather refresh if we're on homepage
+    if (currentPage.includes('index.html') || currentPage === '/') {
+        // Refresh weather every 30 minutes (1800000 milliseconds)
+        setInterval(() => {
+            fetchCurrentWeather();
+            fetchWeatherForecast();
+        }, 1800000);
+    }
 });
 
-
 // ========================================
-// 12. ERROR HANDLING FOR IMAGES
+// 14. ERROR HANDLING FOR IMAGES
 // ========================================
 
 // Add default error handler for all images on page load
@@ -329,7 +426,6 @@ window.addEventListener('load', () => {
         }
     });
 });
-
 
 // ========================================
 // END OF MAIN.JS
