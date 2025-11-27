@@ -1,0 +1,420 @@
+/* ========================================
+   DISCOVER PAGE STYLES
+   ======================================== */
+
+/* Page Hero Section */
+.page-hero {
+    background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Visit Tracker Section */
+.visit-tracker {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.tracker-card {
+    background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tracker-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.visit-message {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.days-since {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.days-since span {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+/* View Controls */
+.view-controls {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.controls-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid #264653;
+    border-radius: 8px;
+    color: #264653;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #264653;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(38, 70, 83, 0.3);
+}
+
+.view-btn.active {
+    background: #264653;
+    color: white;
+}
+
+.view-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Attractions Section */
+.attractions-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.attractions-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #264653;
+    margin-bottom: 2rem;
+}
+
+/* Grid View */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+/* List View */
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.list-view .attraction-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 1.5rem;
+}
+
+.list-view .card-image {
+    height: 200px;
+}
+
+/* Attraction Cards */
+.attraction-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #264653;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.card-address {
+    color: #2a9d8f;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-icon {
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.card-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #2a9d8f 0%, #264653 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card-button:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(42, 157, 143, 0.3);
+}
+
+.card-button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #264653;
+    padding: 2rem;
+    grid-column: 1 / -1;
+}
+
+/* Additional Content Section */
+.additional-content {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.discover-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discover-section h2 {
+    color: #264653;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.discover-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Demographics Container */
+.demographics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.demo-item {
+    background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.demo-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.demo-item p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Call to Action */
+.discover-cta {
+    background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.discover-cta h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.discover-cta p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #e76f51;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #f4a261;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 111, 81, 0.3);
+}
+
+.btn-secondary {
+    background: white;
+    color: #264653;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1rem;
+    }
+    
+    .tracker-card {
+        padding: 1.5rem;
+    }
+    
+    .tracker-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .visit-message {
+        font-size: 1rem;
+    }
+    
+    .list-view .attraction-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .list-view .card-image {
+        height: 250px;
+    }
+    
+    .attractions-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .discover-cta h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+}

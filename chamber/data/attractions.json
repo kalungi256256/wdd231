@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Uganda Christian University",
+        "address": "Bishop Tucker Road, Mukono",
+        "description": "One of Uganda's premier institutions of higher learning, attracting students from across East Africa. UCU offers a wide range of undergraduate and postgraduate programs.",
+        "image": "https://images.unsplash.com/photo-1562774053-701939374585?w=700&auto=format&fit=crop&q=60",
+        "website": "https://www.ucu.ac.ug"
+    },
+    {
+        "title": "Mukono Central Market",
+        "address": "Kampala-Jinja Highway, Mukono",
+        "description": "A vibrant marketplace offering fresh produce, local crafts, and authentic Ugandan goods. Experience the heart of Mukono's trading culture.",
+        "image": "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFya2V0fGVufDB8fDB8fHww",
+        "website": "#"
+    },
+    {
+        "title": "Mukono Town Council",
+        "address": "Mukono District Headquarters",
+        "description": "The administrative center serving the Mukono community and surrounding areas. A hub for local governance and community services.",
+        "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&auto=format&fit=crop&q=60",
+        "website": "https://mukono.go.ug"
+    },
+    {
+        "title": "Nasuuti Coffee Plantations",
+        "address": "Nasuuti Village, Mukono",
+        "description": "Visit the lush coffee plantations where Uganda's finest coffee beans are grown. Learn about the coffee-making process from farm to cup.",
+        "image": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&auto=format&fit=crop&q=60",
+        "website": "#"
+    },
+    {
+        "title": "Lake Victoria Shores",
+        "address": "Eastern Mukono Lakeside",
+        "description": "Enjoy the beautiful shores of Lake Victoria, Africa's largest lake. Perfect for fishing, boat rides, and scenic views.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSQjbUtPums-8yb2SibBtBnR-SNeWRBwtIg&s",
+        "website": "#"
+    },
+    {
+        "title": "Mukono Sports Complex",
+        "address": "Sports Road, Mukono Town",
+        "description": "A modern sports facility hosting football, basketball, and athletics events. Home to local sports teams and community activities.",
+        "image": "https://plus.unsplash.com/premium_photo-1666913667023-4bfd0f6cff0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHNwb3J0c3xlbnwwfHwwfHx8MA%3D%3D",
+        "website": "#"
+    },
+    {
+        "title": "Nasuuti Cultural Center",
+        "address": "Heritage Lane, Nasuuti",
+        "description": "Discover the rich cultural heritage of the Mukono region through traditional dance, music, and art exhibitions.",
+        "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&auto=format&fit=crop&q=60",
+        "website": "#"
+    },
+    {
+        "title": "Mukono Botanical Gardens",
+        "address": "Green Avenue, Mukono",
+        "description": "A peaceful sanctuary featuring native Ugandan plants and trees. Perfect for nature walks and relaxation.",
+        "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=700&auto=format&fit=crop&q=60",
+        "website": "#"
+    }
+]
