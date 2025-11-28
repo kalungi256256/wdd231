@@ -1,0 +1,251 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0A1628;
+            --secondary-color: #D4A574;
+            --background-color: #F5F5F5;
+            --text-color: #1A1A1A;
+            --accent-color: #1E3A5F;
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -40px -40px 40px -40px;
+        }
+
+        h1 {
+            font-family: var(--heading-font);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        h3 {
+            font-family: var(--heading-font);
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .site-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .color-scheme {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .color-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+
+        .color-primary {
+            background-color: var(--primary-color);
+        }
+
+        .color-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .color-accent {
+            background-color: var(--accent-color);
+        }
+
+        .color-background {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .typography-example {
+            padding: 20px;
+            background-color: var(--background-color);
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .font-display {
+            font-family: var(--heading-font);
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .font-body {
+            font-family: var(--body-font);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .wireframe-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .wireframe {
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .wireframe h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wireframe-sketch {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 4px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .wireframe-header {
+            background-color: var(--primary-color);
+            height: 60px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .wireframe-hero {
+            background-color: var(--accent-color);
+            height: 150px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .wireframe-content {
+            background-color: #ddd;
+            flex: 1;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .wireframe-content-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .wireframe-box {
+            background-color: #bbb;
+            height: 80px;
+            flex: 1;
+            border-radius: 4px;
+        }
+
+        .wireframe-footer {
+            background-color: var(--primary-color);
+            height: 50px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .scenario {
+            background-color: var(--background-color);
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .scenario strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .wireframe-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    
