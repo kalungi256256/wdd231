@@ -1,62 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Discover Mukono - Learn about our vibrant community, local attractions, demographics, and business opportunities in Mukono, Uganda.">
+    <meta name="description" content="Discover Mukono - Learn about our vibrant community, local attractions, demographics, and business opportunities in Mukono, Uganda.">
     <meta name="author" content="Kalungi Isaac">
     <meta name="keywords" content="Mukono, Discover Mukono, Uganda Tourism, Mukono Business, Local Attractions">
-
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Discover Mukono | Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://kalungi256256.github.io/wdd231/chamber/images/mukono-og-image.jpg">
     <meta property="og:url" content="https://kalungi256256.github.io/wdd231/chamber/discover.html">
     <meta property="og:description" content="Explore the beauty and opportunities in Mukono, Uganda">
-
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg"
-        alt="Mukono Chamber Logo</text></svg>">
-    <link rel="icon" type="image/png"
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABYklEQVRYw+2WwWrCQBCGv4hHX8CDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw+3xw8sAAAAAElFTkSuQmCC">
-    <link rel="apple-touch-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg"
-        alt="Mukono Chamber Logo</text></svg>">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <!-- Stylesheets -->
-    <link rel="icon" href="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg" type="image/jpeg">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/discover.css">
-
+    
     <title>Discover Mukono | Chamber of Commerce</title>
 </head>
-
 <body>
     <!-- Header Section -->
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg"
-                    alt="Mukono Chamber Logo" width="60" height="60">
+                <img src="https://i.pinimg.com/1200x/4e/0d/99/4e0d994661172f46b06b70ae250131f8.jpg" alt="Mukono Chamber Logo" width="60" height="60">
                 <div class="logo-text">
                     <h1>Mukono Nasuuti</h1>
                     <p class="logo-subtitle">Chamber of Commerce</p>
                 </div>
             </div>
-
+            
             <!-- Navigation -->
             <nav>
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -79,14 +67,14 @@
     <main>
         <!-- Page Hero -->
         <section class="page-hero">
-            <h2>Discover Mukono</h2>
+            <h1>Discover Mukono</h1>
             <p>Explore our vibrant community and rich heritage</p>
         </section>
 
         <!-- Visit Counter -->
         <section class="visit-tracker">
             <div class="tracker-card">
-                <h2>Welcome !</h2>
+                <h2>Welcome Back!</h2>
                 <p id="visit-message" class="visit-message">Loading visit information...</p>
                 <p class="days-since">Days since last visit: <span id="days-since">0</span></p>
             </div>
@@ -97,13 +85,13 @@
             <div class="controls-container">
                 <button id="gridView" class="view-btn active" aria-label="Grid view">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
+                        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
                     </svg>
                     Grid
                 </button>
                 <button id="listView" class="view-btn" aria-label="List view">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
                     </svg>
                     List
                 </button>
@@ -123,12 +111,8 @@
             <!-- About Mukono -->
             <article class="discover-section">
                 <h2>About Mukono</h2>
-                <p>Mukono is a vibrant town in the Central Region of Uganda, located approximately 21 kilometers east of
-                    the capital city, Kampala. Known for its strategic location along the Kampala-Jinja highway, Mukono
-                    serves as a crucial commercial and educational hub in Uganda.</p>
-                <p>The town is home to Uganda Christian University, one of the country's premier institutions of higher
-                    learning, attracting students from across East Africa. This academic presence contributes to
-                    Mukono's dynamic and youthful atmosphere.</p>
+                <p>Mukono is a vibrant town in the Central Region of Uganda, located approximately 21 kilometers east of the capital city, Kampala. Known for its strategic location along the Kampala-Jinja highway, Mukono serves as a crucial commercial and educational hub in Uganda.</p>
+                <p>The town is home to Uganda Christian University, one of the country's premier institutions of higher learning, attracting students from across East Africa. This academic presence contributes to Mukono's dynamic and youthful atmosphere.</p>
             </article>
 
             <!-- Community Info -->
@@ -141,14 +125,11 @@
                     </div>
                     <div class="demo-item">
                         <h4>Businesses</h4>
-                        <p>1000+ registered</p>
+                        <p>500+ registered</p>
                     </div>
                     <div class="demo-item">
                         <h4>Education</h4>
                         <p>Uganda Christian University</p>
-                        <p>Seeta University</p>
-                        <p>Bella University of Healthy Sciience</p>
-                        <p><em>And many  More</em></p>
                     </div>
                 </div>
             </article>
@@ -171,42 +152,33 @@
             <div class="footer-section contact-info">
                 <h3>Mukono Nasuuti Chamber of Commerce</h3>
                 <address>
-                    <p><svg class="location-icon" width="16" height="16" viewBox="0 0 512 512" fill="currentColor">
-                            <path
-                                d="M256 0C167.641 0 96 71.625 96 160c0 24.75 5.625 48.219 15.672 69.125C112.234 230.313 256 512 256 512s143.766-281.688 144.328-282.875C410.375 208.219 416 184.75 416 160 416 71.625 344.375 0 256 0zm0 256c-53.016 0-96-42.984-96-96s42.984-96 96-96 96 42.984 96 96-42.984 96-96 96z" />
-                        </svg> 123 Business Street, Mukono, Uganda</p>
+                    <p>📍 123 Business Street, Mukono, Uganda</p>
                     <p>📧 <a href="mailto:info@mukonochamber.ug">info@mukonochamber.ug</a></p>
                     <p>📞 <a href="tel:+256123456789">+256-123-456-789</a></p>
                 </address>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.971H15.83c-1.491 0-1.956.93-1.956 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"
-                                fill="white" />
+                            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.971H15.83c-1.491 0-1.956.93-1.956 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" fill="white"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="Twitter">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                                fill="white" />
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" fill="white"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="LinkedIn">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                                fill="white" />
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="white"/>
                         </svg>
                     </a>
                 </div>
             </div>
-
+            
             <div class="footer-section development-info">
                 <p>&copy; <span id="currentYear"></span> Mukono Nasuuti Chamber of Commerce</p>
                 <p><strong>Kalungi Isaac</strong></p>
-                <p>All Rights Reseved</p>
+                <p>WDD 231 - Web Frontend Development</p>
                 <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
@@ -216,5 +188,4 @@
     <script src="scripts/main.js" defer></script>
     <script src="scripts/discover.js" defer></script>
 </body>
-
 </html>
