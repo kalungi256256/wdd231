@@ -1,7 +1,7 @@
 // Weather functionality
 document.addEventListener('DOMContentLoaded', function() {
     const currentWeather = document.getElementById('current-weather');
-    const weatherForecast = document.getElementById('weather-forecast');
+    const forecastWeather = document.getElementById('forecast-weather');
 
     // Static weather data for Mukono, Uganda
     const weatherData = {
@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         forecast: [
             { day: "Today", high: 26, low: 18, condition: "Partly Cloudy" },
             { day: "Tomorrow", high: 27, low: 19, condition: "Sunny" },
-            { day: "Saturday", high: 25, low: 19, condition: "Light Rain" }
+            { day: "Saturday", high: 25, low: 19, condition: "Light Rain" },
+            { day: "Sunday", high: 23, low: 17, condition: "Rainy" },
+            { day: "Monday", high: 25, low: 18, condition: "Cloudy" }
         ]
     };
 
@@ -25,23 +27,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p><strong>Temperature:</strong> ${weatherData.current.temperature}°C</p>
                 <p><strong>Condition:</strong> ${weatherData.current.condition}</p>
                 <p><strong>Humidity:</strong> ${weatherData.current.humidity}%</p>
-                <p><strong>Wind:</strong> ${weatherData.current.wind} m/s</p>
+                <p><strong>Wind Speed:</strong> ${weatherData.current.wind} m/s</p>
             </div>
         `;
     }
 
-    // Display forecast
-    if (weatherForecast) {
-        let forecastHTML = '';
+    // Display 5-day forecast
+    if (forecastWeather) {
+        let forecastHTML = '<div class="forecast-grid">';
         weatherData.forecast.forEach(day => {
             forecastHTML += `
-                <div class="weather-day">
-                    <span>${day.day}</span>
-                    <span>${day.condition}</span>
-                    <span>${day.high}°/${day.low}°</span>
+                <div class="forecast-day">
+                    <p class="day-name"><strong>${day.day}</strong></p>
+                    <p class="condition">${day.condition}</p>
+                    <p class="temps"><span>${day.high}°</span> / <span>${day.low}°</span></p>
                 </div>
             `;
         });
-        weatherForecast.innerHTML = forecastHTML;
+        forecastHTML += '</div>';
+        forecastWeather.innerHTML = forecastHTML;
     }
 });

@@ -406,6 +406,35 @@ h2 {
     color: var(--primary-color);
     margin-bottom: 1.2rem;
     font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#current-weather,
+#forecast-weather {
+    min-height: 120px;
+}
+
+#current-weather .weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#current-weather p {
+    margin: 0;
+    color: #274151;
+    font-weight: 500;
+}
+
+#current-weather strong {
+    color: #0a1f3a;
+}
+
+.loading {
+    text-align: center;
+    color: #6b7a86;
+    font-style: italic;
+    padding: 1rem 0;
 }
 
 /* Current Weather */
@@ -432,8 +461,8 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* Forecast */
-.forecast-container {
+/* Forecast Grid */
+.forecast-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
@@ -446,6 +475,32 @@ h2 {
     border-radius: var(--border-radius);
     border: 2px solid #e9ecef;
     transition: var(--transition);
+}
+
+.forecast-day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day .day-name {
+    font-weight: 700;
+    color: #0a1f3a;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-day .condition {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+}
+
+.forecast-day .temps {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.forecast-day .temps span {
+    font-size: 1.1rem;
 }
 
 .forecast-day:hover {

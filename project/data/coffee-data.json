@@ -1,0 +1,230 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mount Elgon Arabica",
+      "type": "arabica",
+      "region": "Mount Elgon",
+      "altitude": 2000,
+      "process": "Washed",
+      "flavorNotes": "Citrus, Chocolate, Nutty",
+      "price": 28.50,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Premium Arabica beans grown on the volcanic slopes of Mount Elgon. Bright acidity with notes of citrus and dark chocolate."
+    },
+    {
+      "id": 2,
+      "name": "Lake Victoria Robusta",
+      "type": "robusta",
+      "region": "Lake Victoria Basin",
+      "altitude": 1200,
+      "process": "Natural",
+      "flavorNotes": "Dark Chocolate, Earthy, Full-bodied",
+      "price": 22.75,
+      "image": "https://images.unsplash.com/photo-1587734195503-8f4e8a21d3a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Rich Robusta beans from the fertile shores of Lake Victoria. Strong, full-bodied with earthy undertones."
+    },
+    {
+      "id": 3,
+      "name": "Rwenzori Blend",
+      "type": "blend",
+      "region": "Rwenzori Mountains",
+      "altitude": 1800,
+      "process": "Honey",
+      "flavorNotes": "Berry, Caramel, Spice",
+      "price": 32.00,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Specialty blend of Arabica and Robusta from the Mountains of the Moon. Sweet berry notes with caramel finish."
+    },
+    {
+      "id": 4,
+      "name": "Kasese Single Origin",
+      "type": "arabica",
+      "region": "Kasese",
+      "altitude": 1600,
+      "process": "Washed",
+      "flavorNotes": "Floral, Lemon, Honey",
+      "price": 26.80,
+      "image": "https://eagle.co.ug/wp-content/uploads/2017/06/Coffee-Plant-Entrepreneurs-Should-Take-A-Look-At-Coffee-Farming.jpg",
+      "description": "Single origin Arabica from the Kasese region. Bright floral aroma with lemon and honey notes."
+    },
+    {
+      "id": 5,
+      "name": "Jinja Robusta Gold",
+      "type": "robusta",
+      "region": "Jinja",
+      "altitude": 1100,
+      "process": "Natural",
+      "flavorNotes": "Cocoa, Nuts, Spice",
+      "price": 24.50,
+      "image": "https://images.unsplash.com/photo-1587734195503-8f4e8a21d3a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Premium Robusta from Jinja. Rich cocoa flavor with nutty undertones and spicy finish."
+    },
+    {
+      "id": 6,
+      "name": "Mubende Arabica Reserve",
+      "type": "arabica",
+      "region": "Mubende",
+      "altitude": 1400,
+      "process": "Washed",
+      "flavorNotes": "Apple, Brown Sugar, Mild",
+      "price": 29.90,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Reserve Arabica from Mubende. Smooth with apple notes and brown sugar sweetness."
+    },
+    {
+      "id": 7,
+      "name": "Masaka Morning Blend",
+      "type": "blend",
+      "region": "Masaka",
+      "altitude": 1300,
+      "process": "Honey",
+      "flavorNotes": "Caramel, Orange, Smooth",
+      "price": 27.25,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Perfect morning blend from Masaka. Smooth caramel body with hints of orange zest."
+    },
+    {
+      "id": 8,
+      "name": "Fort Portal Arabica",
+      "type": "arabica",
+      "region": "Fort Portal",
+      "altitude": 1500,
+      "process": "Washed",
+      "flavorNotes": "Berry, Chocolate, Balanced",
+      "price": 31.50,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Balanced Arabica from Fort Portal. Berry notes with chocolate undertones."
+    },
+    {
+      "id": 9,
+      "name": "Mbale Organic Arabica",
+      "type": "arabica",
+      "region": "Mbale",
+      "altitude": 1700,
+      "process": "Natural",
+      "flavorNotes": "Stone Fruit, Honey, Clean",
+      "price": 34.75,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Organic certified Arabica from Mbale. Clean finish with stone fruit and honey notes."
+    },
+    {
+      "id": 10,
+      "name": "Arua Robusta Select",
+      "type": "robusta",
+      "region": "Arua",
+      "altitude": 900,
+      "process": "Natural",
+      "flavorNotes": "Dark Chocolate, Earthy, Bold",
+      "price": 21.90,
+      "image": "https://images.unsplash.com/photo-1587734195503-8f4e8a21d3a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Select Robusta from Arua. Bold and earthy with dark chocolate intensity."
+    },
+    {
+      "id": 11,
+      "name": "Kampala City Blend",
+      "type": "blend",
+      "region": "Kampala",
+      "altitude": 1200,
+      "process": "Washed",
+      "flavorNotes": "Chocolate, Nuts, Smooth",
+      "price": 25.50,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Signature Kampala blend. Smooth chocolate and nut profile."
+    },
+    {
+      "id": 12,
+      "name": "Mukono Arabica Gold",
+      "type": "arabica",
+      "region": "Mukono",
+      "altitude": 1300,
+      "process": "Honey",
+      "flavorNotes": "Citrus, Brown Sugar, Bright",
+      "price": 30.25,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Gold standard Arabica from Mukono. Bright citrus acidity with brown sugar sweetness."
+    },
+    {
+      "id": 13,
+      "name": "Gulu Robusta Supreme",
+      "type": "robusta",
+      "region": "Gulu",
+      "altitude": 1000,
+      "process": "Natural",
+      "flavorNotes": "Cocoa, Spice, Full-bodied",
+      "price": 23.75,
+      "image": "https://images.unsplash.com/photo-1587734195503-8f4e8a21d3a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Supreme Robusta from Gulu. Full-bodied with cocoa and spice notes."
+    },
+    {
+      "id": 14,
+      "name": "Sipi Falls Arabica",
+      "type": "arabica",
+      "region": "Sipi Falls",
+      "altitude": 1900,
+      "process": "Washed",
+      "flavorNotes": "Floral, Tea-like, Delicate",
+      "price": 33.90,
+      "image": "https://images.unsplash.com/photo-1587734195507-6f5e8a2543c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Arabica from the Sipi Falls region. Delicate floral notes with tea-like character."
+    },
+    {
+      "id": 15,
+      "name": "Uganda Heritage Blend",
+      "type": "blend",
+      "region": "Multiple Regions",
+      "altitude": "Various",
+      "process": "Mixed",
+      "flavorNotes": "Complex, Balanced, Rich",
+      "price": 35.50,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "description": "Heritage blend showcasing Uganda's best regions. Complex and well-balanced."
+    }
+  ],
+  "farmers": [
+    {
+      "id": 1,
+      "name": "John Ssentamu",
+      "region": "Mukono",
+      "cooperative": "Mukono Coffee Farmers Union",
+      "years": 15,
+      "specialty": "Arabica",
+      "farmSize": "2 hectares",
+      "practices": "Organic, shade-grown, composting",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Nakato",
+      "region": "Mount Elgon",
+      "cooperative": "Elgon Women Coffee Producers",
+      "years": 8,
+      "specialty": "Arabica",
+      "farmSize": "1.5 hectares",
+      "practices": "Organic, rainwater harvesting",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Robert Kato",
+      "region": "Lake Victoria Basin",
+      "cooperative": "Victoria Basin Farmers Group",
+      "years": 20,
+      "specialty": "Robusta",
+      "farmSize": "3 hectares",
+      "practices": "Integrated pest management",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Grace Nalwanga",
+      "region": "Rwenzori Mountains",
+      "cooperative": "Rwenzori Mountain Coffee",
+      "years": 12,
+      "specialty": "Blends",
+      "farmSize": "2.5 hectares",
+      "practices": "Shade-grown, biodiversity preservation",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
