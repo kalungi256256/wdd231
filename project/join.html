@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Pearl Beans Coffee. Become a farmer partner or coffee enthusiast community member.">
+    <meta name="keywords" content="coffee farmer partnership, join, community, wholesale, affiliate">
+    <meta name="author" content="Kalungi Isaac">
+    <meta property="og:title" content="Join Us | Pearl Beans Coffee">
+    <meta property="og:description" content="Join our community of coffee lovers and sustainable farming partners.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/coffee-bean.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/script.js"defer></script>
+    <title>Join Us | Pearl Beans Coffee</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">☕ Pearl Beans</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="farmers.html">Our Farmers</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Join Our Community</h1>
+            <p>Be Part of the Coffee Revolution</p>
+            <p>Support sustainable farming while enjoying premium Ugandan coffee</p>
+        </section>
+
+        <!-- Membership Options -->
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 2rem; text-align: center;">How You Can Join</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="padding: 2rem; background-color: #F5F5F5; border-radius: 8px; border-left: 4px solid #C89850;">
+                    <h3 style="color: #0A1628; margin-bottom: 1rem;">🌾 Farmer Partners</h3>
+                    <p>Join our network of sustainable coffee farmers. Access fair pricing, training programs, and direct market connections.</p>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li>✓ Fair trade certification support</li>
+                        <li>✓ Technical training programs</li>
+                        <li>✓ Guaranteed purchase contracts</li>
+                        <li>✓ Community development funding</li>
+                    </ul>
+                </div>
+                
+                <div style="padding: 2rem; background-color: #F5F5F5; border-radius: 8px; border-left: 4px solid #C89850;">
+                    <h3 style="color: #0A1628; margin-bottom: 1rem;">☕ Coffee Subscription</h3>
+                    <p>Get monthly deliveries of freshly roasted premium Ugandan coffee directly to your door.</p>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li>✓ Monthly fresh coffee selection</li>
+                        <li>✓ Exclusive member discounts</li>
+                        <li>✓ Tasting notes & brewing guides</li>
+                        <li>✓ Farmer stories & updates</li>
+                    </ul>
+                </div>
+                
+                <div style="padding: 2rem; background-color: #F5F5F5; border-radius: 8px; border-left: 4px solid #C89850;">
+                    <h3 style="color: #0A1628; margin-bottom: 1rem;">🤝 Wholesale Partner</h3>
+                    <p>Resell our premium coffee to your customers. Bulk orders available with competitive wholesale rates.</p>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li>✓ Wholesale pricing</li>
+                        <li>✓ Marketing materials</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ Training & support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Form -->
+        <section class="form-section">
+            <h2>Register Your Interest</h2>
+            <form id="joinForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+256 123 456 789">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <input type="text" id="country" name="country" required placeholder="Your country">
+                </div>
+
+                <div class="form-group">
+                    <label for="membershipType">I am interested in *</label>
+                    <select id="membershipType" name="membershipType" required>
+                        <option value="">Select an option...</option>
+                        <option value="Farmer Partnership">Farmer Partnership</option>
+                        <option value="Coffee Subscription">Coffee Subscription</option>
+                        <option value="Wholesale Partner">Wholesale Partner</option>
+                        <option value="All of the above">All of the above</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="farmDetailsGroup" style="display: none;">
+                    <label for="farmSize">Farm Size (hectares)</label>
+                    <input type="number" id="farmSize" name="farmSize" placeholder="Size in hectares">
+                </div>
+
+                <div class="form-group" id="farmDetailsGroup2" style="display: none;">
+                    <label for="farmLocation">Farm Location</label>
+                    <input type="text" id="farmLocation" name="farmLocation" placeholder="Your farm's region/location">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us about your interest *</label>
+                    <textarea id="message" name="message" required placeholder="Share your story and why you're interested in joining us..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="newsletter" value="yes"> Subscribe to our newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="form-submit">Submit Registration</button>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+            
+            <div style="display: grid; gap: 1.5rem;">
+                <div style="padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #1E3A5F; margin-bottom: 0.5rem; cursor: pointer;" onclick="toggleFaq(this)">What are the benefits of a coffee subscription? ➕</h3>
+                    <p style="display: none; color: #666; margin-top: 0.5rem;">Subscribers receive freshly roasted coffee monthly, exclusive discounts, tasting notes, brewing guides, and direct stories from the farmers growing your coffee. It's a sustainable way to support our farming partners while enjoying premium quality.</p>
+                </div>
+                
+                <div style="padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #1E3A5F; margin-bottom: 0.5rem; cursor: pointer;" onclick="toggleFaq(this)">How can I become a farmer partner? ➕</h3>
+                    <p style="display: none; color: #666; margin-top: 0.5rem;">Fill out our registration form and select "Farmer Partnership." Our team will review your information and contact you within 5 business days to discuss partnership opportunities, certification support, and training programs.</p>
+                </div>
+                
+                <div style="padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #1E3A5F; margin-bottom: 0.5rem; cursor: pointer;" onclick="toggleFaq(this)">What wholesale terms do you offer? ➕</h3>
+                    <p style="display: none; color: #666; margin-top: 0.5rem;">Wholesale pricing depends on order volume. We offer competitive rates for bulk orders, flexible payment terms, and dedicated support. Contact our wholesale team at wholesale@pearlbeanscoffee.com for custom quotes.</p>
+                </div>
+                
+                <div style="padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #1E3A5F; margin-bottom: 0.5rem; cursor: pointer;" onclick="toggleFaq(this)">How long does shipping take? ➕</h3>
+                    <p style="display: none; color: #666; margin-top: 0.5rem;">Subscription deliveries are sent monthly. International shipping typically takes 7-14 business days depending on your location. All shipments are tracked and insured for your peace of mind.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="farmers.html">Our Farmers</a></li>
+                    <li><a href="join.html">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@pearlbeanscoffee.com</p>
+                <p>Phone: +256 123 456 789</p>
+                <p>Address: Kampala, Uganda</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-icon" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                   
+                    <a href="#" target="_blank" class="social-icon" title="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon" title="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Project Highlights</h3>
+                <a href="https://youtu.be" target="_blank" class="btn btn-secondary">
+                    ▶ Watch Video 
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pearl Beans Coffee. All rights reserved.</p>
+            <p>Developed by Kalungi Isaac | WDD 231 Project</p>
+        </div>
+    </footer>
+
+   
+    <script>
+        // Show/hide farm details based on membership type
+        const membershipType = document.getElementById('membershipType');
+        const farmDetailsGroup = document.getElementById('farmDetailsGroup');
+        const farmDetailsGroup2 = document.getElementById('farmDetailsGroup2');
+
+        membershipType.addEventListener('change', function() {
+            if (this.value === 'Farmer Partnership' || this.value === 'All of the above') {
+                farmDetailsGroup.style.display = 'flex';
+                farmDetailsGroup2.style.display = 'flex';
+            } else {
+                farmDetailsGroup.style.display = 'none';
+                farmDetailsGroup2.style.display = 'none';
+            }
+        });
+
+        // Toggle FAQ answers
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            element.textContent = element.textContent.replace(/➕|➖/, answer.style.display === 'none' ? '➕' : '➖');
+        }
+    </script>
+</body>
+</html>

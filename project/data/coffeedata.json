@@ -1,0 +1,509 @@
+{
+  "company": {
+    "name": "Pearl Beans Coffee",
+    "tagline": "Premium Ugandan Coffee Direct from Farmers to Your Cup",
+    "founded": 2023,
+    "location": "Kampala, Uganda",
+    "email": "info@pearlbeanscoffee.com",
+    "phone": "+256 123 456 789",
+    "website": "https://pearlbeanscoffee.com",
+    "logo": "☕ Pearl Beans",
+    "mission": "Empower local farmers with better market access while educating international buyers about the quality and origin of Ugandan coffee"
+  },
+  "branding": {
+    "colors": {
+      "primary": "#0A1628",
+      "secondary": "#C89850",
+      "accent": "#1E3A5F",
+      "background": "#F5F5F5",
+      "text": "#1A1A1A"
+    },
+    "typography": {
+      "headingFont": "Playfair Display",
+      "bodyFont": "Inter",
+      "headingWeights": [600, 700],
+      "bodyWeights": [400, 500, 600]
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Ugandan Arabica Premium",
+      "category": "Arabica",
+      "price": 18.99,
+      "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=500&h=400&fit=crop",
+      "description": "High altitude grown Arabica beans with smooth, balanced flavor profile",
+      "rating": 4.8,
+      "reviews": 45,
+      "origin": "Bugisu, Uganda",
+      "roast": "Medium",
+      "notes": "Chocolate, Citrus, Nuts",
+      "altitude": "1400-2000m",
+      "processing": "Washed",
+      "certifications": ["Fair Trade", "Organic"],
+      "flavorProfile": {
+        "acidity": "Bright",
+        "body": "Medium",
+        "sweetness": "Balanced",
+        "aftertaste": "Clean"
+      },
+      "brewingMethod": "Pour Over, Espresso, French Press",
+      "packSize": "250g, 500g, 1kg",
+      "harvestSeason": "October - December"
+    },
+    {
+      "id": 2,
+      "name": "Robusta Bold Blend",
+      "category": "Robusta",
+      "price": 14.99,
+      "image": "https://images.unsplash.com/photo-1447933601403-0c6688bcf4b7?w=500&h=400&fit=crop",
+      "description": "Full-bodied Robusta with rich, earthy undertones perfect for espresso",
+      "rating": 4.6,
+      "reviews": 32,
+      "origin": "Kampala Region, Uganda",
+      "roast": "Dark",
+      "notes": "Earth, Cocoa, Spice",
+      "altitude": "900-1200m",
+      "processing": "Natural",
+      "certifications": ["Fair Trade"],
+      "flavorProfile": {
+        "acidity": "Low",
+        "body": "Full",
+        "sweetness": "Chocolate",
+        "aftertaste": "Spicy"
+      },
+      "brewingMethod": "Espresso, Turkish, Moka Pot",
+      "packSize": "250g, 500g, 1kg",
+      "harvestSeason": "September - November"
+    },
+    {
+      "id": 3,
+      "name": "Elgon Mountain Select",
+      "category": "Arabica",
+      "price": 21.99,
+      "image": "https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?w=500&h=400&fit=crop",
+      "description": "Rare mountain-grown Arabica with complex flavor complexity",
+      "rating": 4.9,
+      "reviews": 28,
+      "origin": "Mount Elgon, Uganda",
+      "roast": "Medium",
+      "notes": "Berry, Floral, Caramel",
+      "altitude": "1800-2200m",
+      "processing": "Honey",
+      "certifications": ["Fair Trade", "Organic", "Single Origin"],
+      "flavorProfile": {
+        "acidity": "Vibrant",
+        "body": "Medium-Full",
+        "sweetness": "Floral",
+        "aftertaste": "Berry"
+      },
+      "brewingMethod": "Pour Over, AeroPress, Espresso",
+      "packSize": "250g, 500g",
+      "harvestSeason": "November - January"
+    },
+    {
+      "id": 4,
+      "name": "Rwenzori Reserve",
+      "category": "Arabica",
+      "price": 24.99,
+      "image": "https://images.unsplash.com/photo-1599599810694-b5ac4dd93188?w=500&h=400&fit=crop",
+      "description": "Limited edition from Rwenzori Mountains with exceptional quality",
+      "rating": 5.0,
+      "reviews": 18,
+      "origin": "Rwenzori Mountains, Uganda",
+      "roast": "Light",
+      "notes": "Jasmine, Honey, Peach",
+      "altitude": "2000-2500m",
+      "processing": "Washed",
+      "certifications": ["Fair Trade", "Organic", "Limited Edition"],
+      "flavorProfile": {
+        "acidity": "Lively",
+        "body": "Light-Medium",
+        "sweetness": "Honey",
+        "aftertaste": "Floral"
+      },
+      "brewingMethod": "Pour Over, Chemex, Siphon",
+      "packSize": "250g",
+      "harvestSeason": "December - February",
+      "limitedEdition": true,
+      "annualProduction": "500kg"
+    },
+    {
+      "id": 5,
+      "name": "Mbarara Microlot",
+      "category": "Robusta",
+      "price": 16.99,
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+      "description": "Small batch Robusta with carefully controlled fermentation",
+      "rating": 4.7,
+      "reviews": 24,
+      "origin": "Mbarara, Uganda",
+      "roast": "Medium-Dark",
+      "notes": "Tobacco, Walnut, Dark Chocolate",
+      "altitude": "1100-1400m",
+      "processing": "Fermented",
+      "certifications": ["Fair Trade", "Single Origin"],
+      "flavorProfile": {
+        "acidity": "Low-Medium",
+        "body": "Full",
+        "sweetness": "Dark Chocolate",
+        "aftertaste": "Nutty"
+      },
+      "brewingMethod": "Espresso, French Press, Turkish",
+      "packSize": "250g, 500g",
+      "harvestSeason": "August - October"
+    },
+    {
+      "id": 6,
+      "name": "Fort Portal Sunrise",
+      "category": "Arabica",
+      "price": 19.99,
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+      "description": "Balanced blend with bright acidity and smooth finish",
+      "rating": 4.7,
+      "reviews": 35,
+      "origin": "Fort Portal, Uganda",
+      "roast": "Light-Medium",
+      "notes": "Apple, Caramel, Almond",
+      "altitude": "1300-1700m",
+      "processing": "Washed",
+      "certifications": ["Fair Trade", "Organic"],
+      "flavorProfile": {
+        "acidity": "Bright",
+        "body": "Medium",
+        "sweetness": "Caramel",
+        "aftertaste": "Fruity"
+      },
+      "brewingMethod": "Pour Over, Drip, AeroPress",
+      "packSize": "250g, 500g, 1kg",
+      "harvestSeason": "October - December"
+    }
+  ],
+  "farmers": [
+    {
+      "id": 1,
+      "name": "David Kasoro",
+      "location": "Bugisu, Uganda",
+      "region": "Bugisu Region",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
+      "bio": "Growing premium Arabica for over 15 years. Passionate about sustainable farming and fair trade.",
+      "crops": ["Arabica", "Organic Certified"],
+      "farmSize": "5 hectares",
+      "yearsExperience": 15,
+      "familiesSupported": 8,
+      "certifications": ["Fair Trade Certified", "Organic"],
+      "practices": ["Shade-grown", "Water conservation", "Biodiversity preservation"],
+      "produces": "Ugandan Arabica Premium"
+    },
+    {
+      "id": 2,
+      "name": "Maria Nakato",
+      "location": "Kampala Region, Uganda",
+      "region": "Central Region",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=400&fit=crop",
+      "bio": "Women-led cooperative focusing on quality Robusta and environmental conservation.",
+      "crops": ["Robusta", "Fair Trade"],
+      "farmSize": "8 hectares",
+      "yearsExperience": 12,
+      "familiesSupported": 35,
+      "certifications": ["Fair Trade Certified", "Women-Owned"],
+      "practices": ["Soil enrichment", "Waste management", "Community training"],
+      "produces": "Robusta Bold Blend",
+      "specialization": "Women Farmers Cooperative"
+    },
+    {
+      "id": 3,
+      "name": "John Kipkemboi",
+      "location": "Mount Elgon, Uganda",
+      "region": "Eastern Region",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=400&fit=crop",
+      "bio": "Third generation coffee farmer producing mountain-grown specialty Arabica.",
+      "crops": ["Arabica", "High Altitude"],
+      "farmSize": "3 hectares",
+      "yearsExperience": 28,
+      "familiesSupported": 5,
+      "certifications": ["Fair Trade Certified", "Organic"],
+      "practices": ["High altitude cultivation", "Traditional methods", "Microclimate management"],
+      "produces": "Elgon Mountain Select",
+      "specialization": "Heritage farming family"
+    },
+    {
+      "id": 4,
+      "name": "Grace Namugambe",
+      "location": "Mbarara, Uganda",
+      "region": "Southwestern Region",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=400&fit=crop",
+      "bio": "Community leader promoting cooperative farming and youth training in coffee production.",
+      "crops": ["Robusta", "Training Hub"],
+      "farmSize": "12 hectares",
+      "yearsExperience": 20,
+      "familiesSupported": 50,
+      "certifications": ["Fair Trade Certified", "Community Leader"],
+      "practices": ["Youth training", "Cooperative development", "Knowledge sharing"],
+      "produces": "Mbarara Microlot",
+      "specialization": "Community development and training"
+    },
+    {
+      "id": 5,
+      "name": "Charles Tumusiime",
+      "location": "Fort Portal, Uganda",
+      "region": "Western Region",
+      "image": "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&h=400&fit=crop",
+      "bio": "Innovative farmer using sustainable water management and composting techniques.",
+      "crops": ["Arabica", "Sustainable"],
+      "farmSize": "6 hectares",
+      "yearsExperience": 18,
+      "familiesSupported": 12,
+      "certifications": ["Fair Trade Certified", "Organic", "Sustainable"],
+      "practices": ["Water conservation", "Composting", "Renewable energy"],
+      "produces": "Fort Portal Sunrise",
+      "specialization": "Sustainable innovation"
+    },
+    {
+      "id": 6,
+      "name": "Harriet Achieng",
+      "location": "Rwenzori Mountains, Uganda",
+      "region": "Western Region",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=400&fit=crop",
+      "bio": "Produces rare, limited-edition Arabica using traditional organic methods.",
+      "crops": ["Arabica", "Organic", "Limited Edition"],
+      "farmSize": "4 hectares",
+      "yearsExperience": 16,
+      "familiesSupported": 8,
+      "certifications": ["Fair Trade Certified", "Organic", "Limited Edition Producer"],
+      "practices": ["Traditional methods", "Natural processing", "Heritage preservation"],
+      "produces": "Rwenzori Reserve",
+      "specialization": "Limited edition heritage coffee"
+    }
+  ],
+  "coffeeRegions": [
+    {
+      "id": 1,
+      "name": "Bugisu",
+      "latitude": 1.3,
+      "longitude": 34.2,
+      "altitude": "1400-2000m",
+      "coffeeVariety": "Arabica",
+      "characteristics": "High altitude, volcanic soil, excellent drainage, consistent rainfall",
+      "climate": "Cool tropical mountain climate",
+      "harvestSeason": "October - December",
+      "production": "Premium specialty Arabica",
+      "farmers": ["David Kasoro"]
+    },
+    {
+      "id": 2,
+      "name": "Rwenzori Mountains",
+      "latitude": 0.5,
+      "longitude": 30.0,
+      "altitude": "2000-2500m",
+      "coffeeVariety": "Arabica",
+      "characteristics": "Highest altitude cultivation, rare and premium quality, exceptional flavor complexity",
+      "climate": "Cool misty mountain environment",
+      "harvestSeason": "December - February",
+      "production": "Limited edition rare Arabica",
+      "farmers": ["Harriet Achieng"]
+    },
+    {
+      "id": 3,
+      "name": "Kampala Region",
+      "latitude": 0.3,
+      "longitude": 32.6,
+      "altitude": "900-1200m",
+      "coffeeVariety": "Robusta",
+      "characteristics": "Central location, consistent climate, Robusta dominant, accessible infrastructure",
+      "climate": "Tropical, warm and humid",
+      "harvestSeason": "September - November",
+      "production": "Robust commercial grade coffee",
+      "farmers": ["Maria Nakato"]
+    },
+    {
+      "id": 4,
+      "name": "Mbarara",
+      "latitude": -0.6,
+      "longitude": 30.6,
+      "altitude": "1100-1400m",
+      "coffeeVariety": "Robusta",
+      "characteristics": "Southwestern region, suitable microclimates, good soil quality",
+      "climate": "Tropical with seasonal variations",
+      "harvestSeason": "August - October",
+      "production": "Microlot specialty Robusta",
+      "farmers": ["Grace Namugambe"]
+    },
+    {
+      "id": 5,
+      "name": "Mount Elgon",
+      "latitude": 1.15,
+      "longitude": 34.4,
+      "altitude": "1800-2200m",
+      "coffeeVariety": "Arabica",
+      "characteristics": "High altitude, cool climate, specialty Arabica, unique ecosystem",
+      "climate": "Cool mountain climate with mist",
+      "harvestSeason": "November - January",
+      "production": "Mountain specialty Arabica",
+      "farmers": ["John Kipkemboi"]
+    },
+    {
+      "id": 6,
+      "name": "Fort Portal",
+      "latitude": 0.7,
+      "longitude": 30.3,
+      "altitude": "1300-1700m",
+      "coffeeVariety": "Arabica",
+      "characteristics": "Western region, transitional climate zones, balanced growing conditions",
+      "climate": "Mild tropical mountain climate",
+      "harvestSeason": "October - December",
+      "production": "Balanced specialty Arabica",
+      "farmers": ["Charles Tumusiime"]
+    }
+  ],
+  "weatherImpact": [
+    {
+      "factor": "Temperature",
+      "ideal": "15-24°C",
+      "impact": "Controls bean density and flavor development",
+      "tooHigh": "Smaller beans, reduced quality",
+      "tooLow": "Stunted growth, longer maturation",
+      "role": "Critical for optimal coffee cherry ripening"
+    },
+    {
+      "factor": "Rainfall",
+      "ideal": "1500-3000mm annually",
+      "impact": "Essential for leaf development and cherry formation",
+      "distribution": "Bimodal rainfall pattern preferred",
+      "dryPeriod": "Triggers flowering and fruiting",
+      "role": "Determines coffee yield and size"
+    },
+    {
+      "factor": "Humidity",
+      "ideal": "60-80%",
+      "impact": "Reduces disease risk and maintains plant health",
+      "tooHigh": "Promotes fungal diseases",
+      "tooLow": "Increased pest pressure and stress",
+      "role": "Prevents coffee leaf rust and berry diseases"
+    },
+    {
+      "factor": "Sunlight",
+      "ideal": "Partial shade (40-50%)",
+      "impact": "Produces better flavor and protects ecosystem",
+      "shadeTrees": "Nitrogen-fixing trees preserve soil",
+      "biodiversity": "Supports bird and insect populations",
+      "role": "Enhances cup quality and sustainability"
+    }
+  ],
+  "api": {
+    "name": "OpenWeatherMap",
+    "endpoint": "https://api.openweathermap.org/data/2.5/forecast",
+    "apiKey": "4b6617030376791602a616bc73c4e742",
+    "location": {
+      "city": "Kampala",
+      "country": "Uganda",
+      "latitude": 0.3163,
+      "longitude": 32.5832,
+      "timezone": "Africa/Kampala"
+    },
+    "units": "metric",
+    "parameters": [
+      "temperature",
+      "humidity",
+      "rainfall",
+      "wind_speed",
+      "weather_condition"
+    ],
+    "updateFrequency": "Every 3 hours",
+    "forecastDays": 5
+  },
+  "impact": {
+    "activeFarmers": 45,
+    "hectaresManaged": 250,
+    "familiesSupported": 1000,
+    "fairTradeCertified": "100%",
+    "organicCertified": "65%",
+    "avgFarmSize": "5.8 hectares",
+    "avgFarmersPerFarm": 8,
+    "totalAnnualProduction": "500 tons",
+    "communityDevelopment": "Schools, Water, Healthcare"
+  },
+  "certifications": [
+    {
+      "name": "Fair Trade Certified",
+      "description": "Ensures farmers receive fair compensation",
+      "benefits": ["Better prices", "Long-term contracts", "Community support"]
+    },
+    {
+      "name": "Organic Certified",
+      "description": "No synthetic pesticides or fertilizers",
+      "benefits": ["Soil health", "Biodiversity", "Cleaner coffee"]
+    },
+    {
+      "name": "Rainforest Alliance",
+      "description": "Sustainable farming practices",
+      "benefits": ["Environmental protection", "Worker welfare", "Community development"]
+    }
+  ],
+  "membershipTypes": [
+    {
+      "id": 1,
+      "name": "Farmer Partnership",
+      "description": "Join our network of sustainable coffee farmers",
+      "benefits": [
+        "Fair trade certification support",
+        "Technical training programs",
+        "Guaranteed purchase contracts",
+        "Community development funding"
+      ],
+      "requirements": ["Active farming operation", "Land ownership/lease", "Commitment to sustainability"]
+    },
+    {
+      "id": 2,
+      "name": "Coffee Subscription",
+      "description": "Monthly deliveries of freshly roasted coffee",
+      "benefits": [
+        "Monthly fresh coffee selection",
+        "Exclusive member discounts",
+        "Tasting notes & brewing guides",
+        "Farmer stories & updates"
+      ],
+      "frequency": "Monthly",
+      "pricing": "Starting from $39.99/month"
+    },
+    {
+      "id": 3,
+      "name": "Wholesale Partner",
+      "description": "Resell our premium coffee to your customers",
+      "benefits": [
+        "Wholesale pricing",
+        "Marketing materials",
+        "Dedicated account manager",
+        "Training & support"
+      ],
+      "minimumOrder": "25kg",
+      "discountTiers": ["25-100kg: 15%", "100-250kg: 20%", "250kg+: 25%"]
+    }
+  ],
+  "socialMedia": [
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/pearlbeanscoffee",
+      "followers": "5200",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/pearlbeanscoffee",
+      "followers": "8400",
+      "icon": "instagram"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/pearlbeanscoffee",
+      "followers": "3100",
+      "icon": "twitter"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/pearlbeanscoffee",
+      "followers": "1200",
+      "icon": "youtube"
+    }
+  ]
+}

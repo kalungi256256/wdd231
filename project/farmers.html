@@ -1,174 +1,181 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Coffee Farmers | Pearl Beans Coffee</title>
-    
-    <!-- Meta Description -->
-    <meta name="description" content="Meet the Ugandan coffee farmers behind Pearl Beans Coffee. Direct trade partnerships ensuring fair wages and sustainable farming.">
-    
-    <!-- Meta Author -->
+    <meta name="description" content="Meet the farmers behind Pearl Beans Coffee. Learn about our sustainable farming partnerships across Uganda.">
+    <meta name="keywords" content="coffee farmers, Uganda, fair trade, sustainable farming, coffee cooperatives">
     <meta name="author" content="Kalungi Isaac">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Our Coffee Farmers | Pearl Beans Coffee">
-    <meta property="og:description" content="Meet the Ugandan coffee farmers behind our premium beans.">
+    <meta property="og:title" content="Our Farmers | Pearl Beans Coffee">
+    <meta property="og:description" content="Meet the dedicated farmers growing premium coffee across Uganda with sustainable practices.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/pearl-beans-coffee/farmers.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
-    <!-- Preconnect -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/coffee-bean.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-    
-    <!-- JavaScript -->
-    <script src="scripts/main.js" type="module" defer></script>
-    <script src="scripts/farmers.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/script.js"defer></script>
+    <title>Our Farmers | Pearl Beans Coffee</title>
 </head>
 <body>
-    <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" aria-label="Pearl Beans Coffee Home">
-                    <h1>Pearl Beans Coffee</h1>
-                </a>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">☕ Pearl Beans</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="farmers.html">Our Farmers</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            
-            <!-- Navigation -->
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="hamburger" aria-expanded="false" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="farmers.html" class="active">Our Farmers</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
-    <main id="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Meet Our Farmers</h1>
-                <p>The dedicated Ugandan farmers who grow our premium coffee beans</p>
-            </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Meet Our Farmers</h1>
+            <p>Building direct relationships with passionate coffee growers across Uganda</p>
+            <p>Supporting sustainable livelihoods and premium quality production</p>
         </section>
 
-        <!-- Farmers Grid -->
-        <section class="farmers-section">
-            <div class="container">
-                <div class="farmers-grid" id="farmers-grid">
-                    <!-- Farmers loaded dynamically -->
-                    <div class="loading">Loading farmer profiles...</div>
-                </div>
+        <!-- Our Mission Section -->
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem;">Our Partnership Model</h2>
+            <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">We work directly with coffee farmers across Uganda's diverse coffee-growing regions. Our partnerships are built on transparency, fair compensation, and mutual respect. We invest in farmer education, sustainable practices, and community development to ensure long-term success for both farmers and the coffee industry.</p>
+        </section>
+
+        <!-- Farmers Grid Section -->
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Featured Farming Partners</h2>
+            <div id="farmersContainer" class="farmers-grid">
+                <div class="weather-loading">Loading farmers...</div>
             </div>
         </section>
 
         <!-- Impact Section -->
-        <section class="impact-section">
-            <div class="container">
-                <h2>Our Impact</h2>
-                <div class="impact-stats">
-                    <div class="stat-card">
-                        <h3>150+</h3>
-                        <p>Smallholder Farmers</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>45%</h3>
-                        <p>Higher Income for Farmers</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>100%</h3>
-                        <p>Direct Trade Relationships</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>5</h3>
-                        <p>Regions in Uganda</p>
-                    </div>
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Our Impact</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">45</h3>
+                    <p style="color: #0A1628; font-weight: 600;">Active Farming Partners</p>
+                    <p style="color: #666; font-size: 0.9rem;">Across Uganda's major coffee regions</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">250+</h3>
+                    <p style="color: #0A1628; font-weight: 600;">Hectares Under Management</p>
+                    <p style="color: #666; font-size: 0.9rem;">Dedicated to sustainable farming</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">1000+</h3>
+                    <p style="color: #0A1628; font-weight: 600;">Families Supported</p>
+                    <p style="color: #666; font-size: 0.9rem;">Through fair trade practices</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
+                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
+                    <p style="color: #0A1628; font-weight: 600;">Fair Trade Certified</p>
+                    <p style="color: #666; font-size: 0.9rem;">Ethical sourcing guaranteed</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <h2>Support Our Farmers</h2>
-                <p>Your purchase directly supports Ugandan coffee farming communities.</p>
-                <a href="products.html" class="btn btn-primary">Shop Coffee</a>
+        <!-- Sustainability Section -->
+        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem;">Sustainable Farming Practices</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">🌍 Environmental Conservation</h3>
+                    <p>Our farmers implement shade-growing techniques, preserve forest ecosystems, and practice water conservation. These methods protect biodiversity while improving coffee quality and long-term farm sustainability.</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">👥 Community Development</h3>
+                    <p>We invest in education, healthcare, and infrastructure projects. Our programs support women farmers, youth training in modern farming techniques, and cooperative development to strengthen rural communities.</p>
+                </div>
+                
+                <div>
+                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">💰 Fair Compensation</h3>
+                    <p>Farmers receive premium prices well above market rates for their quality beans. We provide transparent pricing, advance payments, and long-term contracts that ensure stable income for farming families.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Pearl Beans Coffee</h3>
-                    <p>Direct trade Ugandan coffee since 2024</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="farmers.html">Our Farmers</a></li>
-                        <li><a href="attributions.html">Attributions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <address>
-                        Kampala, Uganda<br>
-                        <a href="mailto:info@pearlbeanscoffee.com">info@pearlbeanscoffee.com</a><br>
-                        <a href="tel:+256700123456">+256 700 123 456</a>
-                    </address>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Project Video</h4>
-                    <a href="https://www.youtube.com/watch?v=YOUR_ACTUAL_VIDEO_ID_HERE" class="video-link" target="_blank" rel="noopener noreferrer">
-                        View Project Video ↗
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="farmers.html">Our Farmers</a></li>
+                    <li><a href="join.html">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@pearlbeanscoffee.com</p>
+                <p>Phone: +256 123 456 789</p>
+                <p>Address: Kampala, Uganda</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-icon" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
                     </a>
-                    <p class="video-note">5-minute JavaScript functionality demo</p>
+                    <a href="#" target="_blank" class="social-icon" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m5.521 12c0 3.041-2.48 5.522-5.521 5.522s-5.522-2.481-5.522-5.522c0-.699.131-1.367.36-2h-1.887v6.026c0 .55.45 1 1 1h10.256c.55 0 1-.45 1-1v-6.026h-1.887c.229.633.36 1.301.36 2m-9.143-5.522c0-.55.45-1 1-1h1.887c-.229-.633-.36-1.301-.36-2 0-3.041 2.481-5.522 5.522-5.522s5.521 2.481 5.521 5.522c0 .699-.131 1.367-.36 2h1.887c.55 0 1 .45 1 1v6.026c0 .55-.45 1-1 1H5.378c-.55 0-1-.45-1-1V6.478"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon" title="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon" title="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2024</span> Pearl Beans Coffee. All rights reserved.</p>
-                <p>WDD 231 Final Project | Kalungi Isaac</p>
+            <div class="footer-section">
+                <h3>Project Highlights</h3>
+                <a href="https://youtu.be" target="_blank" class="btn btn-secondary">
+                    ▶ Watch Video 
+                </a>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pearl Beans Coffee. All rights reserved.</p>
+            <p>Developed by Kalungi Isaac | WDD 231 Project</p>
+        </div>
     </footer>
+
+  
 </body>
 </html>

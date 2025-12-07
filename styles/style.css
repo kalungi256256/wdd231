@@ -48,3 +48,63 @@ nav a {
     max-width: 200px;
     height: auto;
 }
+
+/* Social Media Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+/* GitHub specific hover effect */
+.social-links a[aria-label="GitHub"]:hover {
+    background-color: #333;
+}
+
+.social-links a[aria-label="GitHub"]:hover svg {
+    fill: white;
+}
+
+/* LinkedIn specific hover effect */
+.social-links a[aria-label="LinkedIn"]:hover {
+    background-color: #0077b5;
+}
+
+.social-links a[aria-label="LinkedIn"]:hover svg {
+    fill: white;
+}
+
+/* WhatsApp specific hover effect */
+.social-links a[aria-label="WhatsApp"]:hover {
+    background-color: #25D366;
+}
+
+.social-links a[aria-label="WhatsApp"]:hover svg {
+    fill: white;
+}
