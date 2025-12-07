@@ -55,7 +55,7 @@ function updateFooter() {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    const modifiedSpan = document.getElementById('last-modified');
+    const modifiedSpan = document.getElementById('last-Modified');
     if (modifiedSpan) {
         const lastMod = new Date(document.lastModified);
         const formattedDate = lastMod.toLocaleDateString('en-US', {
@@ -67,6 +67,6 @@ function updateFooter() {
             hour: '2-digit',
             minute: '2-digit'
         });
-        modifiedSpan.querySelector('span').textContent = `${formattedDate} at ${formattedTime}`;
+        modifiedSpan.textContent = `Last Modification: ${formattedDate} at ${formattedTime}`;
     }
 }

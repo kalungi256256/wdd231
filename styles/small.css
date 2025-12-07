@@ -20,6 +20,42 @@ main {
 
 .hamburger {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* Navigation */
@@ -34,6 +70,7 @@ main {
     overflow: hidden;
     transition: max-height 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .nav-menu.active {
@@ -45,10 +82,23 @@ main {
     text-align: left;
 }
 
+.nav-menu li:last-child {
+    border-bottom: none;
+}
+
 .nav-menu a {
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: #f8f9fa;
+    color: #084e7c;
 }
 
 /* About section */
