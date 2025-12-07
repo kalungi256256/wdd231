@@ -77,14 +77,36 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hamburger:hover {
+    background-color: rgba(200, 152, 80, 0.2);
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 5px 0;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    border-radius: 2px;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(12px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px);
 }
 
 @media (max-width: 768px) {
@@ -94,22 +116,62 @@ nav {
 
     .nav-menu {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         width: 100%;
+        max-height: calc(100vh - 70px);
         flex-direction: column;
-        background-color: var(--primary-color);
+        background: linear-gradient(135deg, var(--primary-color) 0%, #0d0f1a 100%);
         gap: 0;
+        overflow-y: auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .nav-menu.active {
         display: flex;
     }
 
+    .nav-menu li {
+        border-bottom: 1px solid rgba(200, 152, 80, 0.2);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
     .nav-menu a {
-        padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: block;
+        padding: 1.2rem 1.5rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+    }
+
+    .nav-menu a:hover {
+        background-color: rgba(200, 152, 80, 0.15);
+        border-left-color: var(--secondary-color);
+        padding-left: 2rem;
+        color: var(--secondary-color);
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
     }
 }
 
@@ -122,47 +184,77 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
+    background-image: linear-gradient(135deg, rgba(10, 22, 40, 0.7), rgba(30, 58, 95, 0.7)), url('https://i.pinimg.com/736x/eb/bb/b9/ebbbb9da81c8f96428801dd72fb2af02.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     padding: 4rem 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .hero h1 {
     font-family: var(--heading-font);
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(200, 152, 80, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5), 0 0 15px rgba(200, 152, 80, 0.3);
+    line-height: 1.6;
 }
 
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    background-color: var(--secondary-color);
-    color: white;
+    background: linear-gradient(135deg, #C89850 0%, #d9a860 100%);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.3s;
-    border: none;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #b07a3c;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 6px 16px rgba(200, 152, 80, 0.4), 0 0 10px rgba(200, 152, 80, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #b07a3c;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #d9a860 0%, #C89850 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(200, 152, 80, 0.6), 0 0 15px rgba(200, 152, 80, 0.4);
 }
 
 /* Weather Section */
 .weather-section {
-    background-color: white;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -222,7 +314,10 @@ main {
 
 /* Features Section */
 .featured-section {
-    background-color: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 245, 245, 0.92)),
+                url('https://i.pinimg.com/736x/d8/d7/a5/d8d7a5cced8702efbc0e6a9bed3e93c8.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -274,7 +369,9 @@ main {
 
 /* About Section */
 .about-section {
-    background-color: white;
+    background: url('https://i.pinimg.com/736x/20/63/d4/2063d4a0dfa1e09412891297902dac31.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -415,7 +512,7 @@ main {
 
 .farmer-image {
     width: 100%;
-    height: 250px;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -741,9 +838,9 @@ textarea {
 
 .social-icon:hover {
     
-    border-color: rgb(8, 62, 77);
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 15px 35px rgba(200, 152, 80, 0.4);
+    border-color: rgb(7, 46, 81);
+    transform: scale(1.1)rotate(9deg);
+    
 }
 
 .social-icon:hover::before {
@@ -828,8 +925,18 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        min-height: 300px;
+        padding: 2rem 1rem;
+    }
+
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
     }
 
     main {
@@ -842,5 +949,34 @@ footer {
 
     .weather-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .weather-section {
+        background-attachment: scroll;
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 250px;
+        padding: 1.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
 }

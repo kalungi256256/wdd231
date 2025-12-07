@@ -190,6 +190,7 @@ const navMenu = document.getElementById('navMenu');
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
 }
 
@@ -198,6 +199,7 @@ if (navMenu) {
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
         });
     });
 }
@@ -329,8 +331,26 @@ function handleFormSubmit(e) {
     window.location.href = `form-result.html?${params.toString()}`;
 }
 
+// Update year and last modified date in footer
+function updateFooter() {
+    // Set current year
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    // Set last modified date
+    const lastModifiedElement = document.getElementById('lastModified');
+    if (lastModifiedElement) {
+        const lastModified = new Date(document.lastModified);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        lastModifiedElement.textContent = lastModified.toLocaleDateString('en-US', options);
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    updateFooter();
     fetchWeather();
     displayProducts();
     displayFarmers();
