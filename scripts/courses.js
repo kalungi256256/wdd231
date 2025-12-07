@@ -1,5 +1,6 @@
 // Course data array
-const courses = [{
+const courses = [
+    {
         subject: 'CSE',
         number: 110,
         title: 'Introduction to Programming',
@@ -66,14 +67,14 @@ const coursesContainer = document.getElementById('courses-container');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const totalCreditsElement = document.getElementById('total-credits');
 
-// Initialize courses
+// Initialize courses on DOM load
 document.addEventListener('DOMContentLoaded', function() {
     displayCourses(courses);
     setupFilterListeners();
     updateCreditsSummary(courses);
 });
 
-// Display courses
+// Display courses in the container
 function displayCourses(coursesToDisplay) {
     coursesContainer.innerHTML = '';
 
@@ -82,50 +83,51 @@ function displayCourses(coursesToDisplay) {
         return;
     }
 
-    coursesToDisplay.forEach(course => {
-                const courseCard = document.createElement('div');
-                courseCard.className = `course-card ${course.completed ? 'completed' : ''}`;
+    coursesToDisplay.forEach((course, index) => {
+        const courseCard = document.createElement('div');
+        courseCard.className = `course-card ${course.completed ? 'completed' : ''}`;
+        courseCard.style.animationDelay = `${index * 0.05}s`;
 
-                courseCard.innerHTML = `
+        courseCard.innerHTML = `
             <div class="course-header">
                 <div class="course-code">${course.subject} ${course.number}</div>
                 <div class="course-credits">${course.credits} credits</div>
             </div>
-            <div class="course-title">${course.title}</div>
-            <div class="course-description">${course.description}</div>
+            <h3 class="course-title">${course.title}</h3>
+            <p class="course-description">${course.description}</p>
             <div class="course-technology">
                 ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
             <div class="course-status ${course.completed ? 'status-completed' : 'status-pending'}">
-                ${course.completed ? 'Completed' : 'Not Completed'}
+                ${course.completed ? '✓ Completed' : '⏳ In Progress'}
             </div>
         `;
-        
+
         coursesContainer.appendChild(courseCard);
     });
 }
 
-// Setup filter listeners
+// Setup filter button listeners
 function setupFilterListeners() {
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             // Add active class to clicked button
             this.classList.add('active');
-            
-            // Filter courses
+
+            // Filter and display courses
             const filter = this.getAttribute('data-filter');
             filterCourses(filter);
         });
     });
 }
 
-// Filter courses
+// Filter courses based on subject
 function filterCourses(filter) {
     let filteredCourses;
-    
+
     switch (filter) {
         case 'all':
             filteredCourses = courses;
@@ -139,33 +141,18 @@ function filterCourses(filter) {
         default:
             filteredCourses = courses;
     }
-    
+
     displayCourses(filteredCourses);
     updateCreditsSummary(filteredCourses);
 }
 
-// Update credits summary
+// Update total credits display
 function updateCreditsSummary(coursesToDisplay) {
     const totalCredits = coursesToDisplay.reduce((total, course) => {
         return total + course.credits;
     }, 0);
-    
+
     if (totalCreditsElement) {
         totalCreditsElement.textContent = totalCredits;
     }
-}
-function updateFooter(){
-    // Current Year import
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan){
-     yearSpan.textContent = new Date().getFullYear();
-    }
-
-    // Last modified content
-    const modifiedSpan = document.getElementById('last-Modified');
-        if (modifiedSpan) {
-            modifiedSpan.textContent = document.lastModified
-
-        }
-    
 }
