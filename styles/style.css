@@ -43,7 +43,7 @@ header {
     background: linear-gradient(135deg, #1e40af 0%, #0369a1 50%, #0891b2 100%);
     color: white;
     box-shadow: var(--shadow-lg);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
 }
