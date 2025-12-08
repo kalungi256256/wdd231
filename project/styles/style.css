@@ -424,7 +424,10 @@ main {
     max-width: 1200px;
     margin: 60px auto;
     padding: 48px 32px;
-    background: linear-gradient(135deg, #fff9f0 0%, #f8f4e9 50%, #f1ebdf 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(245, 245, 245, 0.92)),
+                url('https://i.pinimg.com/736x/d8/d7/a5/d8d7a5cced8702efbc0e6a9bed3e93c8.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 24px;
     border: 3px solid rgba(200, 152, 80, 0.2);
     box-shadow: 0 8px 40px rgba(139, 69, 19, 0.08);
