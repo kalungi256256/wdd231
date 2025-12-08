@@ -8,15 +8,16 @@
     <meta name="author" content="Kalungi Isaac">
     <meta property="og:title" content="Our Farmers | Pearl Beans Coffee">
     <meta property="og:description" content="Meet the dedicated farmers growing premium coffee across Uganda with sustainable practices.">
-    <meta property="og:image" content="https://kalungi256256.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://pearlbeanscoffee.com/farmers.html">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/coffee-bean.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <script src="scripts/script.js" defer ></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/farmers.css">
     <title>Our Farmers | Pearl Beans Coffee</title>
 </head>
 <body>
@@ -41,74 +42,74 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero first">
+        <section class="hero">
             <h1>Meet Our Farmers</h1>
             <p>Building direct relationships with passionate coffee growers across Uganda</p>
             <p>Supporting sustainable livelihoods and premium quality production</p>
         </section>
 
         <!-- Our Mission Section -->
-        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem;">Our Partnership Model</h2>
-            <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">We work directly with coffee farmers across Uganda's diverse coffee-growing regions. Our partnerships are built on transparency, fair compensation, and mutual respect. We invest in farmer education, sustainable practices, and community development to ensure long-term success for both farmers and the coffee industry.</p>
+        <section class="mission-section">
+            <h2>Our Partnership Model</h2>
+            <p>We work directly with coffee farmers across Uganda's diverse coffee-growing regions. Our partnerships are built on transparency, fair compensation, and mutual respect. We invest in farmer education, sustainable practices, and community development to ensure long-term success for both farmers and the coffee industry.</p>
         </section>
 
         <!-- Farmers Grid Section -->
-        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Featured Farming Partners</h2>
+        <section class="farmers-section">
+            <h2>Featured Farming Partners</h2>
             <div id="farmersContainer" class="farmers-grid">
                 <div class="weather-loading">Loading farmers...</div>
             </div>
         </section>
 
         <!-- Impact Section -->
-        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Our Impact</h2>
+        <section class="impact-section">
+            <h2>Our Impact</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
-                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">45</h3>
-                    <p style="color: #0A1628; font-weight: 600;">Active Farming Partners</p>
-                    <p style="color: #666; font-size: 0.9rem;">Across Uganda's major coffee regions</p>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>45</h3>
+                    <p class="impact-label">Active Farming Partners</p>
+                    <p class="impact-description">Across Uganda's major coffee regions</p>
                 </div>
                 
-                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
-                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">250+</h3>
-                    <p style="color: #0A1628; font-weight: 600;">Hectares Under Management</p>
-                    <p style="color: #666; font-size: 0.9rem;">Dedicated to sustainable farming</p>
+                <div class="impact-card">
+                    <h3>250+</h3>
+                    <p class="impact-label">Hectares Under Management</p>
+                    <p class="impact-description">Dedicated to sustainable farming</p>
                 </div>
                 
-                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
-                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">1000+</h3>
-                    <p style="color: #0A1628; font-weight: 600;">Families Supported</p>
-                    <p style="color: #666; font-size: 0.9rem;">Through fair trade practices</p>
+                <div class="impact-card">
+                    <h3>1000+</h3>
+                    <p class="impact-label">Families Supported</p>
+                    <p class="impact-description">Through fair trade practices</p>
                 </div>
                 
-                <div style="text-align: center; padding: 1.5rem; background-color: #F5F5F5; border-radius: 8px;">
-                    <h3 style="color: #C89850; font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
-                    <p style="color: #0A1628; font-weight: 600;">Fair Trade Certified</p>
-                    <p style="color: #666; font-size: 0.9rem;">Ethical sourcing guaranteed</p>
+                <div class="impact-card">
+                    <h3>100%</h3>
+                    <p class="impact-label">Fair Trade Certified</p>
+                    <p class="impact-description">Ethical sourcing guaranteed</p>
                 </div>
             </div>
         </section>
 
         <!-- Sustainability Section -->
-        <section style="background-color: white; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-            <h2 style="font-family: 'Playfair Display', serif; color: #0A1628; font-size: 2rem; margin-bottom: 1.5rem;">Sustainable Farming Practices</h2>
+        <section class="sustainability-section">
+            <h2>Sustainable Farming Practices</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div>
-                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">🌍 Environmental Conservation</h3>
+            <div class="sustainability-grid">
+                <div class="sustainability-card">
+                    <h3>🌍 Environmental Conservation</h3>
                     <p>Our farmers implement shade-growing techniques, preserve forest ecosystems, and practice water conservation. These methods protect biodiversity while improving coffee quality and long-term farm sustainability.</p>
                 </div>
                 
-                <div>
-                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">👥 Community Development</h3>
+                <div class="sustainability-card">
+                    <h3>👥 Community Development</h3>
                     <p>We invest in education, healthcare, and infrastructure projects. Our programs support women farmers, youth training in modern farming techniques, and cooperative development to strengthen rural communities.</p>
                 </div>
                 
-                <div>
-                    <h3 style="color: #1E3A5F; margin-bottom: 1rem;">💰 Fair Compensation</h3>
+                <div class="sustainability-card">
+                    <h3>💰 Fair Compensation</h3>
                     <p>Farmers receive premium prices well above market rates for their quality beans. We provide transparent pricing, advance payments, and long-term contracts that ensure stable income for farming families.</p>
                 </div>
             </div>
@@ -168,10 +169,10 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="year">2025</span> Pearl Beans Coffee. All rights reserved.</p>
-            <p> Kalungi Isaac | WDD 231 Project | Last Modified: <span id="lastModified">--</span></p>
+            <p>Kalungi Isaac | WDD 231 Project | Last Modified: <span id="lastModified">--</span></p>
         </div>
     </footer>
 
-  
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>

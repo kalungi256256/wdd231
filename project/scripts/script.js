@@ -2,9 +2,145 @@
 const WEATHER_API_KEY = '4b6617030376791602a616bc73c4e742';
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
-// Global variables
-let coffeeProducts = [];
-let farmers = [];
+// Coffee Products Data
+const coffeeProducts = [
+    {
+        id: 1,
+        name: 'Ugandan Arabica Premium',
+        category: 'Arabica',
+        price: 18.99,
+        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=250&fit=crop',
+        description: 'High altitude grown Arabica beans with smooth, balanced flavor profile',
+        rating: 4.8,
+        reviews: 45,
+        origin: 'Bugisu, Uganda',
+        roast: 'Medium',
+        notes: 'Chocolate, Citrus, Nuts'
+    },
+    {
+        id: 2,
+        name: 'Robusta Bold Blend',
+        category: 'Robusta',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1447933601403-0c6688bcf4b7?w=400&h=250&fit=crop',
+        description: 'Full-bodied Robusta with rich, earthy undertones perfect for espresso',
+        rating: 4.6,
+        reviews: 32,
+        origin: 'Kampala Region, Uganda',
+        roast: 'Dark',
+        notes: 'Earth, Cocoa, Spice'
+    },
+    {
+        id: 3,
+        name: 'Elgon Mountain Select',
+        category: 'Arabica',
+        price: 21.99,
+        image: 'https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?w=400&h=250&fit=crop',
+        description: 'Rare mountain-grown Arabica with complex flavor complexity',
+        rating: 4.9,
+        reviews: 28,
+        origin: 'Mount Elgon, Uganda',
+        roast: 'Medium',
+        notes: 'Berry, Floral, Caramel'
+    },
+    {
+        id: 4,
+        name: 'Rwenzori Reserve',
+        category: 'Arabica',
+        price: 24.99,
+        image: 'https://images.unsplash.com/photo-1600788148184-7109a588a20e?w=400&h=250&fit=crop',
+        description: 'Limited edition from Rwenzori Mountains with exceptional quality',
+        rating: 5.0,
+        reviews: 18,
+        origin: 'Rwenzori Mountains, Uganda',
+        roast: 'Light',
+        notes: 'Jasmine, Honey, Peach'
+    },
+    {
+        id: 5,
+        name: 'Mbarara Microlot',
+        category: 'Robusta',
+        price: 16.99,
+        image: 'https://images.unsplash.com/photo-1510373349887-d6b7e7ddc29f?w=400&h=250&fit=crop',
+        description: 'Small batch Robusta with carefully controlled fermentation',
+        rating: 4.7,
+        reviews: 24,
+        origin: 'Mbarara, Uganda',
+        roast: 'Medium-Dark',
+        notes: 'Tobacco, Walnut, Dark Chocolate'
+    },
+    {
+        id: 6,
+        name: 'Fort Portal Sunrise',
+        category: 'Arabica',
+        price: 19.99,
+        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=250&fit=crop',
+        description: 'Balanced blend with bright acidity and smooth finish',
+        rating: 4.7,
+        reviews: 35,
+        origin: 'Fort Portal, Uganda',
+        roast: 'Light-Medium',
+        notes: 'Apple, Caramel, Almond'
+    }
+];
+
+// Farmers Data
+const farmers = [
+    {
+        id: 1,
+        name: 'David Kasoro',
+        location: 'Bugisu, Uganda',
+        image: 'https://i.pinimg.com/1200x/68/30/56/68305605854c9381bd650fa0e78fc663.jpg',
+        bio: 'Growing premium Arabica for over 15 years. Passionate about sustainable farming and fair trade.',
+        crops: ['Arabica', 'Organic Certified'],
+        farmSize: '5 hectares'
+    },
+    {
+        id: 2,
+        name: 'Maria Nakato',
+        location: 'Kampala Region, Uganda',
+        image: 'https://i.pinimg.com/736x/74/5d/f5/745df59120bb7247ae8b228d7a1fe249.jpg',
+        bio: 'Women-led cooperative focusing on quality Robusta and environmental conservation.',
+        crops: ['Robusta', 'Fair Trade'],
+        farmSize: '8 hectares'
+    },
+    {
+        id: 3,
+        name: 'John Kipkemboi',
+        location: 'Mount Elgon, Uganda',
+        image: 'https://i.pinimg.com/1200x/a9/39/57/a93957d6b256a2e01c00c8ebd2d96dad.jpg',
+        bio: 'Third generation coffee farmer producing mountain-grown specialty Arabica.',
+        crops: ['Arabica', 'High Altitude'],
+        farmSize: '3 hectares'
+    },
+    {
+        id: 4,
+        name: 'Grace Namugambe',
+        location: 'Mbarara, Uganda',
+        image: 'https://i.pinimg.com/736x/6f/a3/9d/6fa39d8261840c0f3c3c369452c1cf78.jpg',
+        bio: 'Community leader promoting cooperative farming and youth training in coffee production.',
+        crops: ['Robusta', 'Training Hub'],
+        farmSize: '12 hectares'
+    },
+    {
+        id: 5,
+        name: 'Charles Tumusiime',
+        location: 'Fort Portal, Uganda',
+        image: 'https://i.pinimg.com/1200x/2b/0a/f9/2b0af926279fbadb00334ec9f284278b.jpg',
+        bio: 'Innovative farmer using sustainable water management and composting techniques.',
+        crops: ['Arabica', 'Sustainable'],
+        farmSize: '6 hectares'
+    },
+    {
+        id: 6,
+        name: 'Harriet Achieng',
+        location: 'Rwenzori Mountains, Uganda',
+        image: 'https://i.pinimg.com/736x/46/2a/07/462a071d3f3e2f46760bdbdd6059cc53.jpg',
+        bio: 'Produces rare, limited-edition Arabica using traditional organic methods.',
+        crops: ['Arabica', 'Organic', 'Limited Edition'],
+        farmSize: '4 hectares'
+    }
+];
 
 // Modal Functions
 function openProductModal(productId) {
@@ -27,22 +163,12 @@ function openProductModal(productId) {
             <p><strong>Rating:</strong> ⭐ ${product.rating} (${product.reviews} reviews)</p>
         </div>
         <div class="modal-footer">
-            <button class="btn" id="addToCartBtn">Add to Cart</button>
-            <button class="btn" id="closeModalBtn" style="background-color: #999;">Close</button>
+            <button class="btn" onclick="addToCart(${product.id}); closeModal('productModal')">Add to Cart</button>
+            <button class="btn" style="background-color: #999;" onclick="closeModal('productModal')">Close</button>
         </div>
     `;
     
     document.getElementById('productModal').classList.add('active');
-    
-    // Add event listeners to dynamically created buttons
-    document.getElementById('addToCartBtn').addEventListener('click', function() {
-        addToCart(product.id);
-        closeModal('productModal');
-    });
-    
-    document.getElementById('closeModalBtn').addEventListener('click', function() {
-        closeModal('productModal');
-    });
 }
 
 function closeModal(modalId) {
@@ -57,16 +183,6 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Close modal button
-document.addEventListener('DOMContentLoaded', function() {
-    const closeModalBtn = document.getElementById('closeModal');
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', function() {
-            closeModal('productModal');
-        });
-    }
-});
-
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
@@ -74,7 +190,6 @@ const navMenu = document.getElementById('navMenu');
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
     });
 }
 
@@ -83,7 +198,6 @@ if (navMenu) {
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
         });
     });
 }
@@ -161,25 +275,12 @@ function displayProducts() {
                     <strong>From:</strong> ${product.origin} | <strong>Roast:</strong> ${product.roast}
                 </p>
                 <div style="display: flex; gap: 0.5rem;">
-                    <button class="product-btn view-details" data-id="${product.id}" style="flex: 1;">View Details</button>
-                    <button class="product-btn add-cart" data-id="${product.id}" style="flex: 1;">Add to Cart</button>
+                    <button class="product-btn" onclick="openProductModal(${product.id})" style="flex: 1;">View Details</button>
+                    <button class="product-btn" onclick="addToCart(${product.id})" style="flex: 1;">Add to Cart</button>
                 </div>
             </div>
         </div>
     `).join('');
-    
-    // Event listeners for product buttons
-    document.querySelectorAll('.view-details').forEach(btn => {
-        btn.addEventListener('click', function() {
-            openProductModal(parseInt(this.dataset.id));
-        });
-    });
-    
-    document.querySelectorAll('.add-cart').forEach(btn => {
-        btn.addEventListener('click', function() {
-            addToCart(parseInt(this.dataset.id));
-        });
-    });
 }
 
 // Display Farmers
@@ -189,7 +290,7 @@ function displayFarmers() {
 
     container.innerHTML = farmers.map(farmer => `
         <div class="farmer-card">
-            <img src="${farmer.image}" alt="${farmer.name}" class="farmer-image">
+            <img src="${farmer.image}" alt="${farmer.name}" class="farmer-image" loading="lazy">
             <div class="farmer-info">
                 <h3 class="farmer-name">${farmer.name}</h3>
                 <p class="farmer-location">📍 ${farmer.location}</p>
@@ -204,6 +305,16 @@ function displayFarmers() {
 // Add to Cart
 function addToCart(productId) {
     const product = coffeeProducts.find(p => p.id === productId);
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    const existingItem = cart.find(item => item.id === productId);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.name} added to cart!`);
 }
 
@@ -212,42 +323,19 @@ function handleFormSubmit(e) {
     e.preventDefault();
     
     const formData = new FormData(e.target);
+    const params = new URLSearchParams(formData);
     
-    alert('Thank you for your message! We will get back to you soon.');
-    e.target.reset();
-}
-
-// Update year and last modified date in footer
-function updateFooter() {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-
-    const lastModifiedElement = document.getElementById('lastModified');
-    if (lastModifiedElement) {
-        const lastModified = new Date(document.lastModified);
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        lastModifiedElement.textContent = lastModified.toLocaleDateString('en-US', options);
-    }
+    localStorage.setItem('lastFormSubmission', JSON.stringify(Object.fromEntries(formData)));
+    window.location.href = `form-result.html?${params.toString()}`;
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch coffee data from JSON
-    fetch('data/products.json')
-        .then(response => response.json())
-        .then(data => {
-            coffeeProducts = data.products;
-            displayProducts();
-        })
-        .catch(error => console.error('Error loading coffee data:', error));
-    
-    updateFooter();
     fetchWeather();
+    displayProducts();
     displayFarmers();
     
-    const form = document.getElementById('contactForm');
+    const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', handleFormSubmit);
     }
