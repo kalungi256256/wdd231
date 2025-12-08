@@ -38,7 +38,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level.',
         technology: ['C#'],
-        completed: false
+        completed: True
     },
     {
         subject: 'WDD',
@@ -58,7 +58,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: false
+        completed: True
     }
 ];
 

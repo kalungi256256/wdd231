@@ -9,7 +9,7 @@ const coffeeProducts = [
         name: 'Ugandan Arabica Premium',
         category: 'Arabica',
         price: 18.99,
-        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=300&h=225&fit=crop&q=80',
         description: 'High altitude grown Arabica beans with smooth, balanced flavor profile',
         rating: 4.8,
         reviews: 45,
@@ -22,7 +22,7 @@ const coffeeProducts = [
         name: 'Robusta Bold Blend',
         category: 'Robusta',
         price: 14.99,
-        image: 'https://images.unsplash.com/photo-1447933601403-0c6688bcf4b7?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1447933601403-0c6688bcf4b7?w=300&h=225&fit=crop&q=80',
         description: 'Full-bodied Robusta with rich, earthy undertones perfect for espresso',
         rating: 4.6,
         reviews: 32,
@@ -35,7 +35,7 @@ const coffeeProducts = [
         name: 'Elgon Mountain Select',
         category: 'Arabica',
         price: 21.99,
-        image: 'https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?w=300&h=225&fit=crop&q=80',
         description: 'Rare mountain-grown Arabica with complex flavor complexity',
         rating: 4.9,
         reviews: 28,
@@ -48,7 +48,7 @@ const coffeeProducts = [
         name: 'Rwenzori Reserve',
         category: 'Arabica',
         price: 24.99,
-        image: 'https://images.unsplash.com/photo-1600788148184-7109a588a20e?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1600788148184-7109a588a20e?w=300&h=225&fit=crop&q=80',
         description: 'Limited edition from Rwenzori Mountains with exceptional quality',
         rating: 5.0,
         reviews: 18,
@@ -61,7 +61,7 @@ const coffeeProducts = [
         name: 'Mbarara Microlot',
         category: 'Robusta',
         price: 16.99,
-        image: 'https://images.unsplash.com/photo-1510373349887-d6b7e7ddc29f?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1510373349887-d6b7e7ddc29f?w=300&h=225&fit=crop&q=80',
         description: 'Small batch Robusta with carefully controlled fermentation',
         rating: 4.7,
         reviews: 24,
@@ -74,7 +74,7 @@ const coffeeProducts = [
         name: 'Fort Portal Sunrise',
         category: 'Arabica',
         price: 19.99,
-        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=300&h=225&fit=crop&q=80',
         description: 'Balanced blend with bright acidity and smooth finish',
         rating: 4.7,
         reviews: 35,
@@ -151,9 +151,9 @@ function openProductModal(productId) {
     modalBody.innerHTML = `
         <div class="modal-header">
             <h2>${product.name}</h2>
-            <div class="modal-price">$${product.price}</div>
+            <div class="modal-price">${product.price}</div>
         </div>
-        <img src="${product.image}" alt="${product.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; object-fit: contain; background-color: #f5f5f5;">
+        <img src="${product.image}" alt="${product.name} - ${product.category} Coffee Beans" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
         <div class="modal-body">
             <p><strong>Category:</strong> ${product.category}</p>
             <p><strong>Origin:</strong> ${product.origin}</p>
@@ -262,13 +262,13 @@ function displayProducts() {
 
     container.innerHTML = coffeeProducts.map(product => `
         <div class="product-card">
-            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <img src="${product.image}" alt="${product.name} - ${product.category} coffee from ${product.origin}" class="product-image" loading="lazy">
             <div class="product-info">
                 <div class="product-category">${product.category}</div>
                 <h3 class="product-name">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
                 <div class="product-meta">
-                    <span class="product-price">$${product.price}</span>
+                    <span class="product-price">${product.price}</span>
                     <span class="product-rating">⭐ ${product.rating} (${product.reviews})</span>
                 </div>
                 <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
@@ -290,7 +290,7 @@ function displayFarmers() {
 
     container.innerHTML = farmers.map(farmer => `
         <div class="farmer-card">
-            <img src="${farmer.image}" alt="${farmer.name}" class="farmer-image" loading="lazy">
+            <img src="${farmer.image}" alt="${farmer.name} - Coffee Farmer from ${farmer.location}" class="farmer-image" loading="lazy">
             <div class="farmer-info">
                 <h3 class="farmer-name">${farmer.name}</h3>
                 <p class="farmer-location">📍 ${farmer.location}</p>
